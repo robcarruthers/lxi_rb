@@ -1,24 +1,39 @@
-# LxiRb
+# lxi_rb
 
-TODO: Delete this and the text below, and describe your gem
+![Gem](https://img.shields.io/gem/v/lxi_rb?color=green&label=version) ![Ruby](https://img.shields.io/static/v1?message=Ruby&color=red&logo=Ruby&logoColor=FFFFFF&label=v3.2.1) ![Ruby](https://img.shields.io/gitlab/license/robcarruthers/rfbeam?color=orange)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/lxi_rb`. To experiment with that code, run `bin/console` for an interactive prompt.
+Ruby wrapper for the [liblxi](https://github.com/lxi-tools/liblxi) library.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    $ bundle add lxi_rb
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    $ gem install lxi_rb
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+❯ irb
+irb(main):001:0> require 'lxi_rb'
+=> true
+
+irb(main):002:0> Lxi.search
+Searching for LXI devices - please wait...
+
+Broadcast: 127.0.0.1, lo0
+Broadcast: 192.168.10.255, en0
+Device: 192.168.10.21, Siglent Technologies,SDS1104X-E,SDSMMGKC6R0011,8.2.6.1.37R8
+Device: 192.168.10.107, Siglent Technologies,SDM3055-SC,SDM35GBQ6R1882,1.01.01.25
+=> nil
+
+irb(main):003:0> Lxi.scpi '192.168.10.21', 0, nil, :vxi11, '*IDN?'
+Siglent Technologies,SDS1104X-E,SDSMMGKC6R0011,8.2.6.1.37R8
+=> 0
+```
 
 ## Development
 
