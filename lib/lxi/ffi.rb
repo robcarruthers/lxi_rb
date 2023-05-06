@@ -46,9 +46,9 @@ module Lxi
   attach_function :lxi_receive, %i[int pointer int int], :int
   attach_function :lxi_disconnect, [:int], :int
 
-  def self.testing
-    puts lxi_init
-  end
+  # Define the constants
+  OK = 0
+  ERROR = -1
 
   # Send and recieve scpi commands
   def self.scpi(address, port = 0, name = nil, protocol, command)

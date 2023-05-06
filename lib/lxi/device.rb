@@ -12,30 +12,39 @@ module Lxi
       @id = -1
 
       connect
+
+      yield self if block_given?
     end
 
     def connect
+      raise Error, 'LXI Library Initialisation Error' unless Lxi.lxi_init == Lxi::OK
+
       @id = Lxi.lxi_connect(@address, @port, @name, @timeout, @protocol)
-      @id
+      raise Error, 'LXI Connection Error' if @id == Lxi::ERROR
+
+      true
     end
-    method_alias :open, :connect
+    alias open connect
 
     def disconnect
-      Lxi.lxi_disconnect(@device_id)
+      Lxi.lxi_disconnect(@id)
     end
-    method_alias :close, :disconnect
+    alias close disconnect
 
     def send(message)
-      Lxi.lxi_send(@device_id, message, message.length, @timeout)
+      bytes_sent = Lxi.lxi_send(@id, message, message.length, @timeout)
+      raise Error, 'LXI communications error' unless bytes_sent.positive?
+
+      bytes_sent
     end
-    method_alias :scpi, :send
-    method_alias :write, :send
+    alias scpi send
+    alias write send
 
     def read(length)
       message = FFI::MemoryPointer.new(:char, length)
-      Lxi.lxi_receive(@id, message, length, @timeout)
+      raise Error, 'LXI communications error' unless Lxi.lxi_receive(@id, message, length, @timeout).positive?
       message.read_string
     end
-    method_alias :gets, :read
+    alias gets read
   end
 end
