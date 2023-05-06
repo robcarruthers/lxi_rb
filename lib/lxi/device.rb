@@ -1,37 +1,35 @@
 module Lxi
   class Device
     include FFI
-    attr_reader :device_id, :address, :port, :name, :timeout, :protocol
+    attr_accessor :id, :address, :port, :name, :timeout, :protocol
 
-    def initialize(address, port, name, timeout, protocol)
+    def initialize(address, protocol)
       @address = address
-      @port = port
-      @name = name
-      @timeout = timeout
+      @port = 0
+      @name = nil
+      @timeout = 1000
       @protocol = protocol
-      @device_id = -1
-    end
+      @id = -1
 
-    def test
-      puts 'Testing!'
+      connect
     end
 
     def connect
-      @device_id = Lxi.lxi_connect(@address, @port, @name, @timeout, :VXI11)
-      @device_id
+      @id = Lxi.lxi_connect(@address, @port, @name, @timeout, @protocol)
+      @id
     end
 
     def disconnect
       Lxi.lxi_disconnect(@device_id)
     end
 
-    def send_message(message)
+    def send_scpi(message)
       Lxi.lxi_send(@device_id, message, message.length, @timeout)
     end
 
-    def receive_message(length)
+    def read(length)
       message = FFI::MemoryPointer.new(:char, length)
-      Lxi.lxi_receive(@device_id, message, length, @timeout)
+      Lxi.lxi_receive(@id, message, length, @timeout)
       message.read_string
     end
   end
