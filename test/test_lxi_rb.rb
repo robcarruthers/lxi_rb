@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require 'test_helper'
 
 class TestLxiRb < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::LxiRb::VERSION
+    refute_nil ::Lxi::VERSION
   end
 
   def test_it_does_something_useful
