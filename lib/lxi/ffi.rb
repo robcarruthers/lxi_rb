@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'ffi'
 
 module Lxi
@@ -55,7 +56,7 @@ module Lxi
   end
 
   # Search for LXI-11 devices on the specified interface and return hash of devices
-  def self.devices(interface: 'en0', timeout: 1000, type: :vxi11)
+  def self.devices(timeout: 1000, type: :vxi11)
     raise Error, 'LXI Library Initialisation Error' unless lxi_init == LXI_OK
 
     devices = []
@@ -68,10 +69,8 @@ module Lxi
     info[:broadcast] = BroadcastCallback
     info[:device] = callback
 
-    result = lxi_discover_internal(info, timeout, type)
+    lxi_discover_internal(info, timeout, type)
     sleep 0.1
-    puts "result: #{result}"
-    puts "info: #{info[:device].read_string}"
     devices
   end
 
@@ -87,6 +86,6 @@ module Lxi
 
     result = lxi_discover_internal(info, timeout, type)
 
-    puts "Error during discovery: #{result}" if result < 0
+    puts "Error during discovery: #{result}" if result.negative?
   end
 end
