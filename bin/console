@@ -13,7 +13,7 @@ require 'lxi_rb'
 
 require 'irb'
 
-def reload!(print = true)
+def reload!(print: true)
   puts 'Reloading ...' if print
   # Main project directory.
   root_dir = File.expand_path('..', __dir__)
