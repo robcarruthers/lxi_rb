@@ -1,10 +1,11 @@
-from_latest_tag = false
+from_latest_tag = true
 ignore_merge_commits = false
 branch_whitelist = []
 pre_bump_hooks = []
 post_bump_hooks = []
 pre_package_bump_hooks = []
 post_package_bump_hooks = []
+tag_prefix = "v"
 
 [commit_types]
 
