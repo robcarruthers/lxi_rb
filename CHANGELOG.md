@@ -1,5 +1,6 @@
 ## Unreleased (5962f8d..a38d66c)
 #### Documentation
+## [v0.2.7](https://github.com/robcarruthers/lxi_rb/compare/v0.2.8..v0.2.9) - 2023-05-08
 - **(Changelog)** Update cog config - (a38d66c) - Rob Carruthers
 - **(Changelog)** Update - (0e53608) - Rob Carruthers
 - **(Changelog)** Add cog config - (df15cb2) - Rob Carruthers
