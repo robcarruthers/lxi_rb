@@ -3,7 +3,6 @@ require 'ffi'
 module Lxi
   extend FFI::Library
 
-  # Set the path to the library
   ffi_lib '/opt/homebrew/lib/liblxi.dylib'
   ffi_lib_flags :now, :global
 
