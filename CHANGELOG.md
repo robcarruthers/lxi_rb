@@ -6,6 +6,16 @@
 - **(Changelog)** Update - (5962f8d) - Rob Carruthers
 
 - - -
+## v0.2.7 - 2023-05-07
+#### Documentation
+- **(Changelog)** Update - (9159d41) - Rob Carruthers
+- **(Changelog)** Update cog config - (a38d66c) - Rob Carruthers
+- **(Changelog)** Update - (0e53608) - Rob Carruthers
+- **(Changelog)** Add cog config - (df15cb2) - Rob Carruthers
+- **(Changelog)** Update - (5962f8d) - Rob Carruthers
+
+- - -
+
 
 ## v0.2.6 - 2023-05-07
 #### Documentation
