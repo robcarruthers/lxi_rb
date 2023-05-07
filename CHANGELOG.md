@@ -1,7 +1,5 @@
 ## Unreleased (2023-05-07)
-
 ## v0.2.6 (2023-05-07)
-
 ### New feature:
 
 - **device**: Init LXI Session([`4880f26`](https://github.com/robcarruthers/lxi_rb/commit/4880f2602b0a63713186a407ac4b3d2bd2dd4b10)) (by Rob Carruthers)
