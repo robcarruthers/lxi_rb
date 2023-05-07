@@ -17,10 +17,10 @@ module Lxi
     end
 
     def connect
-      raise Error, 'LXI Library Initialisation Error' unless Lxi.lxi_init == Lxi::OK
+      raise Error, 'LXI Library Initialisation Error' unless Lxi.lxi_init == LXI_OK
 
       @id = Lxi.lxi_connect(@address, @port, @name, @timeout, @protocol)
-      raise Error, 'LXI Connection Error' if @id == Lxi::ERROR
+      raise Error, 'LXI Connection Error' if @id == LXI_ERROR
 
       true
     end
@@ -42,7 +42,9 @@ module Lxi
 
     def read(length)
       message = FFI::MemoryPointer.new(:char, length)
-      raise Error, 'LXI communications error' unless Lxi.lxi_receive(@id, message, length, @timeout).positive?
+      bytes_received = Lxi.lxi_receive(@id, message, length, @timeout)
+      raise Error, 'LXI communications error' unless bytes_received.positive?
+
       message.read_string
     end
     alias gets read
