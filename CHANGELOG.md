@@ -6,6 +6,12 @@
 - **(Changelog)** Update - (5962f8d) - Rob Carruthers
 
 - - -
+## [v0.2.8](https://github.com/robcarruthers/lxi_rb/compare/v0.2.7..v0.2.8) - 2023-05-07
+#### Documentation
+- **(Changelog)** Update cog config - ([857a9e8](https://github.com/robcarruthers/lxi_rb/commit/857a9e8b7d5580fee7a5b15f4f46dad96bda3378)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## v0.2.7 - 2023-05-07
 #### Documentation
 - **(Changelog)** Update - (9159d41) - Rob Carruthers
