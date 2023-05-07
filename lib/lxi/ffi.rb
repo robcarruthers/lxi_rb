@@ -7,11 +7,24 @@ module Lxi
   ffi_lib '/opt/homebrew/lib/liblxi.dylib'
   ffi_lib_flags :now, :global
 
-  # Define the enums
+  # Expose liblxi functions
+  attach_function :lxi_init, [], :int
+  attach_function :lxi_discover_internal, :lxi_discover, [LxiInfo.ptr, :int, :lxi_discover_type], :int
+  attach_function :lxi_discover_if, [LxiInfo.ptr, :string, :int, :lxi_discover_type], :int
+  attach_function :lxi_connect, %i[string int string int lxi_protocol_type], :int
+  attach_function :lxi_send, %i[int string int int], :int
+  attach_function :lxi_receive, %i[int pointer int int], :int
+  attach_function :lxi_disconnect, [:int], :int
+
+  # LXI Constants
+  LXI_OK = 0
+  LXI_ERROR = -1
+
+  # Define liblxi enums
   enum :lxi_protocol_type, %i[vxi11 raw hyslip]
   enum :lxi_discover_type, %i[vxi11 mdns]
 
-  # Callbacks
+  # VXI11 Discovery Callbacks
   BroadcastCallback =
     FFI::Function.new(:void, %i[pointer pointer]) do |address, interface|
       puts "Broadcast: #{address.read_string}, #{interface.read_string}"
@@ -27,7 +40,7 @@ module Lxi
       puts "Service: #{address.read_string}, #{id.read_string}, #{service.read_string}, #{port}"
     end
 
-  # Define the structs
+  # Define liblxi structs
   class LxiInfo < FFI::Struct
     layout :broadcast,
            callback(%i[pointer pointer], :void),
@@ -37,43 +50,7 @@ module Lxi
            callback(%i[pointer pointer pointer int], :void)
   end
 
-  # Define the functions
-  attach_function :lxi_init, [], :int
-  attach_function :lxi_discover_internal, :lxi_discover, [LxiInfo.ptr, :int, :lxi_discover_type], :int
-  attach_function :lxi_discover_if, [LxiInfo.ptr, :string, :int, :lxi_discover_type], :int
-  attach_function :lxi_connect, %i[string int string int lxi_protocol_type], :int
-  attach_function :lxi_send, %i[int string int int], :int
-  attach_function :lxi_receive, %i[int pointer int int], :int
-  attach_function :lxi_disconnect, [:int], :int
-
-  # Define the constants
-  OK = 0
-  ERROR = -1
-
-  # Send and recieve scpi commands
-  def self.scpi(address, port = 0, name = nil, protocol, command)
-    response = FFI::MemoryPointer.new(:char, 65_536)
-    timeout = 1000
-
-    # Initialize LXI library
-    lxi_init
-
-    # Connect LXI device
-    device = lxi_connect(address, port, name, timeout, protocol)
-
-    # Send SCPI command
-    lxi_send(device, command, command.length, timeout)
-
-    # Wait for response
-    lxi_receive(device, response, response.size, timeout)
-
-    puts response.read_string
-
-    # Disconnect
-    lxi_disconnect(device)
-  end
-
-  # Discover LXI devices on the LAN
+  # Discover LXI-11 devices on the LAN
   def self.search(timeout: 1000, type: :vxi11)
     lxi_init
 
