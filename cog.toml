@@ -11,7 +11,13 @@ tag_prefix = "v"
 
 [changelog]
 path = "CHANGELOG.md"
-authors = []
+template = "remote"
+remote = "github.com"
+repository = "lxi_rb"
+owner = "robcarruthers"
+authors = [
+  { signature = "Rob Carruthers", username = "robcarruthers" }
+]
 
 [bump_profiles]
 
