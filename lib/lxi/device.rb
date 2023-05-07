@@ -2,6 +2,8 @@
 module Lxi
   class Device
     include FFI
+    include LxiMethods
+
     attr_accessor :id, :address, :port, :name, :timeout, :protocol
 
     def initialize(address, protocol)
