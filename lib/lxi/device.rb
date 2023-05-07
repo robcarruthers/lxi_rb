@@ -17,7 +17,7 @@ module Lxi
     end
 
     def connect
-      raise Error, 'LXI Library Initialisation Error' unless Lxi.lxi_init == LXI_OK
+      init_lxi_session
 
       @id = Lxi.lxi_connect(@address, @port, @name, @timeout, @protocol)
       raise Error, 'LXI Connection Error' if @id == LXI_ERROR
