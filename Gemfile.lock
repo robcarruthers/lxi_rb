@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lxi_rb (0.2.12)
+    lxi_rb (0.2.13)
       ffi (~> 1.15)
 
 GEM
