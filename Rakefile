@@ -2,7 +2,6 @@
 
 require 'bundler/gem_tasks'
 require 'rake/testtask'
-require 'structured_changelog/tasks'
 
 Rake::TestTask.new(:test) do |t|
   t.libs << 'test'
