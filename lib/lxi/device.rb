@@ -2,7 +2,6 @@
 module Lxi
   class Device
     include FFI
-    include LxiMethods
 
     attr_accessor :id, :address, :port, :name, :timeout, :protocol
 
@@ -20,7 +19,7 @@ module Lxi
     end
 
     def connect
-      init_lxi_session
+      Lxi.init_lxi_session
 
       @id = Lxi.lxi_connect(@address, @port, @name, @timeout, @protocol)
       raise Error, 'LXI Connection Error' if @id == LXI_ERROR
