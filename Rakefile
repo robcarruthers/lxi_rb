@@ -14,3 +14,10 @@ require 'rubocop/rake_task'
 RuboCop::RakeTask.new
 
 task default: %i[test rubocop]
+
+desc "Bumps the gem version and generates changelog modifications with cocogitto"
+task :bump_gem do
+  cog_version = `cog -V`
+  puts $?
+  puts cog_version
+end
