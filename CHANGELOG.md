@@ -3,6 +3,15 @@
 - **(Test)** Some great Feature - ([76314bf](https://github.com/robcarruthers/lxi_rb/commit/76314bf4ccd40d9df8efe11bb1fc6046299b0284)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
+## [v0.2.25](https://github.com/robcarruthers/lxi_rb/compare/v0.2.24..v0.2.25) - 2023-05-08
+#### Bug Fixes
+- **(Changelog)** Fix someBug - ([4001a3a](https://github.com/robcarruthers/lxi_rb/commit/4001a3a6438cd080d9042ca5a03de454fc913a74)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(SomeBug)** Made changes - ([deaf163](https://github.com/robcarruthers/lxi_rb/commit/deaf163992682f53471b686f4f52ee237f4d7162)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Miscellaneous Chores
+- **(cog)** Update config - ([de8d8a4](https://github.com/robcarruthers/lxi_rb/commit/de8d8a4d34a11cdf76c72c550f09ddde9ea1bca5)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## [v0.2.24](https://github.com/robcarruthers/lxi_rb/compare/v0.2.23..v0.2.24) - 2023-05-08
 #### Miscellaneous Chores
 - **(version)** v0.2.24 - ([0a4f0d3](https://github.com/robcarruthers/lxi_rb/commit/0a4f0d3a2df6bf5f688bcc466fde1523352ce73b)) - [@robcarruthers](https://github.com/robcarruthers)
