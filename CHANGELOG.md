@@ -1,3 +1,4 @@
+## [0.2.11](https://github.com/robcarruthers/lxi_rb/compare/v0.2.8...v0.2.12) (2023-05-08)
 ## [0.2.11](https://github.com/robcarruthers/lxi_rb/compare/v0.2.8...v0.2.9) (2023-05-08)
 # [](https://github.com/robcarruthers/lxi_rb/compare/v0.2.9...v) (2023-05-07)
 
