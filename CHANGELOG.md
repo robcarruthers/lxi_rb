@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
 ## Unreleased ([d0d5941..4dd447e](https://github.com/robcarruthers/lxi_rb/compare/d0d5941..4dd447e))
+- - -
 #### Bug Fixes
 - **(Cog)** Update config - ([bc97116](https://github.com/robcarruthers/lxi_rb/commit/bc97116f3c152a37b398ded210dc9dfcb9d48238)) - [@robcarruthers](https://github.com/robcarruthers)
 #### Documentation
