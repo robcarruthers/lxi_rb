@@ -3,6 +3,14 @@
 - **(Test)** Some great Feature - ([76314bf](https://github.com/robcarruthers/lxi_rb/commit/76314bf4ccd40d9df8efe11bb1fc6046299b0284)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
+## [v0.2.18](https://github.com/robcarruthers/lxi_rb/compare/v0.2.16..v0.2.18) - 2023-05-08
+#### Features
+- **(Test)** Some great Feature - ([76314bf](https://github.com/robcarruthers/lxi_rb/commit/76314bf4ccd40d9df8efe11bb1fc6046299b0284)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Miscellaneous Chores
+- **(Changelog)** Update - ([8f7371b](https://github.com/robcarruthers/lxi_rb/commit/8f7371b5f2e0130476f5e173d5beb8aa32be7a6f)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 
 ## [v0.2.16](https://github.com/robcarruthers/lxi_rb/compare/1c313adf0923f740888c4a54550b855f3ed3c51a..v0.2.16) - 2023-05-08
 #### Bug Fixes
