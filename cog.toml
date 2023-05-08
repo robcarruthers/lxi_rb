@@ -1,8 +1,14 @@
 from_latest_tag = true
 ignore_merge_commits = false
 branch_whitelist = []
-pre_bump_hooks = [ { command = "bump set {{version}}", message = "Bumping gem from {{latest}} to {{version}}" } ]
-post_bump_hooks = [ { command = "rake release", message = "Releasing gem {{version}}" } ]
+pre_bump_hooks = [
+  "bump set {{version}} -p 'chore(version):' -m 'v{{version}}'",
+  "echo 'Bumping gem from {{latest}} to {{version}}'"
+  ]
+post_bump_hooks = [
+  "rake release",
+  "echo 'Releasing gem {{version}}'"
+  ]
 pre_package_bump_hooks = []
 post_package_bump_hooks = []
 tag_prefix = "v"
