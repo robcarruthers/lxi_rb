@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
 - - -
+## [v0.4.1](https://github.com/robcarruthers/lxi_rb/compare/v0.4.0..v0.4.1) - 2023-05-09
+#### Documentation
+- **(readme)** Update - ([7bc1302](https://github.com/robcarruthers/lxi_rb/commit/7bc130206ade43df0e679208118c6b6f595a6760)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(readme)** Update - ([803632e](https://github.com/robcarruthers/lxi_rb/commit/803632e91a3c0e27478132a22135bb46b0edb58e)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## [v0.4.0](https://github.com/robcarruthers/lxi_rb/compare/v0.3.0..v0.4.0) - 2023-05-09
 #### Features
 - **(Device)** Add query - ([5fb904b](https://github.com/robcarruthers/lxi_rb/commit/5fb904b469eb92bd7df1bd18874b2743f51cae4e)) - [@robcarruthers](https://github.com/robcarruthers)
