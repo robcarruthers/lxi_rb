@@ -1,6 +1,6 @@
 # lxi_rb
 
-![Gem](https://img.shields.io/gem/v/lxi_rb?color=green&label=version) ![Ruby](https://img.shields.io/static/v1?message=Ruby&color=red&logo=Ruby&logoColor=FFFFFF&label=v3.2.1) ![Ruby](https://img.shields.io/gitlab/license/robcarruthers/rfbeam?color=orange)
+![Gem](https://img.shields.io/gem/v/lxi_rb?color=green&label=version) ![Ruby](https://img.shields.io/static/v1?message=Ruby&color=red&logo=Ruby&logoColor=FFFFFF&label=v3.1.2) ![Ruby](https://img.shields.io/gitlab/license/robcarruthers/rfbeam?color=orange)
 
 Ruby wrapper for the [liblxi](https://github.com/lxi-tools/liblxi) library.
 
