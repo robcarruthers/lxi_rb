@@ -1,6 +1,6 @@
 module Lxi
-  # Search for LXI-11 devices on the specified interface and return hash of devices
-  def self.devices(timeout: 1000, type: :vxi11)
+  # Search for LXI-11 instruments on the network and return hash of instruments
+  def self.discover_instruments(timeout: 1000, type: :vxi11)
     raise Error, 'LXI Library Initialisation Error' unless lxi_init == LXI_OK
 
     devices = []
@@ -18,7 +18,7 @@ module Lxi
   end
 
   # Discover LXI-11 devices on the LAN
-  def self.discover_local(timeout: 1000, type: :vxi11)
+  def self.search(timeout: 1000, type: :vxi11)
     Lxi.init_lxi_session
 
     info = FFIFunctions::LxiInfo.new

@@ -17,22 +17,21 @@ If bundler is not being used to manage dependencies, install the gem by executin
 ## Usage
 
 ```ruby
-❯ irb
-irb(main):001:0> require 'lxi_rb'
-=> true
-
-irb(main):002:0> Lxi.search
+Lxi.search
 Searching for LXI devices - please wait...
 
 Broadcast: 127.0.0.1, lo0
 Broadcast: 192.168.10.255, en0
 Device: 192.168.10.21, Siglent Technologies,SDS1104X-E,SDSMMGKC6R0011,8.2.6.1.37R8
 Device: 192.168.10.107, Siglent Technologies,SDM3055-SC,SDM35GBQ6R1882,1.01.01.25
-=> nil
 
-irb(main):003:0> Lxi.scpi '192.168.10.21', 0, nil, :vxi11, '*IDN?'
-Siglent Technologies,SDS1104X-E,SDSMMGKC6R0011,8.2.6.1.37R8
-=> 0
+Lxi.discover_instruments
+=> [{:address=>"192.168.10.107", :id=>"Siglent Technologies,SDM3055-SC,SDM35GBQ6R1882,1.01.01.25"}]
+
+Lxi::Device.new('192.168.10.107', :vxi11) do |meter|
+    puts meter.query 'MEAS:VOLT:DC?'
+end
+=> -4.78767775E-04
 ```
 
 ## Development

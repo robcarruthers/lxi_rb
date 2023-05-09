@@ -50,5 +50,10 @@ module Lxi
       message.read_string
     end
     alias gets read
+
+    def query(message)
+      send message
+      read 10_000
+    end
   end
 end
