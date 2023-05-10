@@ -1,5 +1,8 @@
-## Unreleased ([76604d7..b70c1f0](https://github.com/robcarruthers/lxi_rb/compare/76604d7..b70c1f0))
+## Unreleased ([76604d7..b40e582](https://github.com/robcarruthers/lxi_rb/compare/76604d7..b40e582))
 #### Miscellaneous Chores
+- **(rake)** Update .gitignore, create versioning tasks - ([f525812](https://github.com/robcarruthers/lxi_rb/commit/f5258124a67ec6fd6d28ad07134c68501cf5cf06)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.4.3 - ([b40e582](https://github.com/robcarruthers/lxi_rb/commit/b40e58236c2d56f06b3bd9d64af81337489d32f1)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.4.2 - ([af245b7](https://github.com/robcarruthers/lxi_rb/commit/af245b7c0e6f1fd0c79d1ac9a449ae252f958118)) - [@robcarruthers](https://github.com/robcarruthers)
 - Update .gitignore - ([b70c1f0](https://github.com/robcarruthers/lxi_rb/commit/b70c1f0566db9b4043f02b4e3f79c228fd0531df)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
