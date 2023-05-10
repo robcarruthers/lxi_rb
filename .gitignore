@@ -9,6 +9,5 @@
 /lxi_rb-*.gem
 /.vscode/
 /tasks/
-/.streerc
-/.tool-versions
-/cog.toml
+.streerc
+cog.toml
