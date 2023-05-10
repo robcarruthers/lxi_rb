@@ -9,6 +9,12 @@
 - Update .gitignore - ([b70c1f0](https://github.com/robcarruthers/lxi_rb/commit/b70c1f0566db9b4043f02b4e3f79c228fd0531df)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
+## [v0.4.8](https://github.com/robcarruthers/lxi_rb/compare/v0.4.7..v0.4.8) - 2023-05-10
+#### Miscellaneous Chores
+- Update .gitignore - ([bea47ce](https://github.com/robcarruthers/lxi_rb/commit/bea47cef4f6c236b4c16fd1465b957cee891dfb3)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## [v0.4.7](https://github.com/robcarruthers/lxi_rb/compare/v0.4.6..v0.4.7) - 2023-05-10
 #### Miscellaneous Chores
 - **(bundle)** Update - ([7fa3ab3](https://github.com/robcarruthers/lxi_rb/commit/7fa3ab3f9abcac5fae1093c932d4e70cf3092920)) - [@robcarruthers](https://github.com/robcarruthers)
