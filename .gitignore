@@ -9,3 +9,4 @@
 lxi_rb-*.gem
 /.vscode/
 .streerc
+/lib/tasks/

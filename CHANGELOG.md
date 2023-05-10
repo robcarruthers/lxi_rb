@@ -1,25 +1,31 @@
-# Changelog
-
-All notable changes to this project will be documented in this file.
-The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
+## Unreleased ([76604d7..b70c1f0](https://github.com/robcarruthers/lxi_rb/compare/76604d7..b70c1f0))
+#### Miscellaneous Chores
+- Update .gitignore - ([b70c1f0](https://github.com/robcarruthers/lxi_rb/commit/b70c1f0566db9b4043f02b4e3f79c228fd0531df)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
-## [v0.4.1](https://github.com/robcarruthers/lxi_rb/compare/v0.4.0..v0.4.1) - 2023-05-09
+
+## [v0.4.1](https://github.com/robcarruthers/lxi_rb/compare/v0.4.0..v0.4.1) - 2023-05-10
 #### Documentation
 - **(readme)** Update - ([7bc1302](https://github.com/robcarruthers/lxi_rb/commit/7bc130206ade43df0e679208118c6b6f595a6760)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(readme)** Update - ([803632e](https://github.com/robcarruthers/lxi_rb/commit/803632e91a3c0e27478132a22135bb46b0edb58e)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Miscellaneous Chores
+- **(version)** v0.4.1 - ([76604d7](https://github.com/robcarruthers/lxi_rb/commit/76604d7d28193e543fba7e03af785236455d81eb)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.4.1 - ([b91277d](https://github.com/robcarruthers/lxi_rb/commit/b91277d32e1217157bdac5268c3ce04e036beaf1)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.4.0](https://github.com/robcarruthers/lxi_rb/compare/v0.3.0..v0.4.0) - 2023-05-09
+## [v0.4.0](https://github.com/robcarruthers/lxi_rb/compare/v0.3.0..v0.4.0) - 2023-05-10
 #### Features
 - **(Device)** Add query - ([5fb904b](https://github.com/robcarruthers/lxi_rb/commit/5fb904b469eb92bd7df1bd18874b2743f51cae4e)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Miscellaneous Chores
+- **(version)** v0.4.0 - ([de44d74](https://github.com/robcarruthers/lxi_rb/commit/de44d74040c50a17e7b58e0519e9291e15e7e22f)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.4.0 - ([8fb8834](https://github.com/robcarruthers/lxi_rb/commit/8fb88341f81c912a2ea38bbea5b6b437bb973019)) - [@robcarruthers](https://github.com/robcarruthers)
 #### Refactoring
 - **(LXI)** Update modules and mixins - ([c749759](https://github.com/robcarruthers/lxi_rb/commit/c7497595df2d08f1d9f4875b5c5a60f0dfe71ebd)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.3.0](https://github.com/robcarruthers/lxi_rb/compare/v0.2.26..v0.3.0) - 2023-05-08
+## [v0.3.0](https://github.com/robcarruthers/lxi_rb/compare/d0d594119d79afe36f62a44688c216bbc2510f79..v0.3.0) - 2023-05-10
 #### Bug Fixes
 - **(Cog)** Update config - ([bc97116](https://github.com/robcarruthers/lxi_rb/commit/bc97116f3c152a37b398ded210dc9dfcb9d48238)) - [@robcarruthers](https://github.com/robcarruthers)
 #### Documentation
@@ -45,6 +51,8 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 - **(Changelog)** Update - ([9a07697](https://github.com/robcarruthers/lxi_rb/commit/9a076972668e06728171eb68b92c37cd9364e85d)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(Cog)** Update config - ([46f4e5d](https://github.com/robcarruthers/lxi_rb/commit/46f4e5d0c177849b14a7068761bb5068895b5027)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(cog)** Update config - ([0c68f6e](https://github.com/robcarruthers/lxi_rb/commit/0c68f6e9c6928a9bf3e102314cb1adff5f7a8c14)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.3.0 - ([3a5c2ed](https://github.com/robcarruthers/lxi_rb/commit/3a5c2eda1270ff568adb9f049c322f8bcb41448a)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.3.0 - ([28d7777](https://github.com/robcarruthers/lxi_rb/commit/28d777748c5502d83d79eb7990d0f445911f03a3)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(version)** v0.2.26 - ([4dd447e](https://github.com/robcarruthers/lxi_rb/commit/4dd447e7d35a01345702885bdf005e71bfbf3397)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(version)** v0.2.26 - ([cad6630](https://github.com/robcarruthers/lxi_rb/commit/cad6630f80628ae312a0d8e902d044c38b8eede4)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(version)** v0.2.25 - ([d15ee42](https://github.com/robcarruthers/lxi_rb/commit/d15ee42773ed09712accdf3681619424b9b00d9e)) - [@robcarruthers](https://github.com/robcarruthers)
@@ -71,7 +79,6 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 - v0.2.10 - ([c4334ed](https://github.com/robcarruthers/lxi_rb/commit/c4334edd1cb97b99be2b77e276a27d49fd390fa9)) - [@robcarruthers](https://github.com/robcarruthers)
 - v0.2.9 - ([5a02c26](https://github.com/robcarruthers/lxi_rb/commit/5a02c26264ef7a9ec77580c0b0639e952a8a67e4)) - [@robcarruthers](https://github.com/robcarruthers)
 - add github CI yml - ([6bb36d2](https://github.com/robcarruthers/lxi_rb/commit/6bb36d2aae7788866f2f247502b292340b57ac1b)) - [@robcarruthers](https://github.com/robcarruthers)
-- Initial commit - ([d0d5941](https://github.com/robcarruthers/lxi_rb/commit/d0d594119d79afe36f62a44688c216bbc2510f79)) - [@robcarruthers](https://github.com/robcarruthers)
 #### Refactoring
 - **(Device)** add error checking - ([27455eb](https://github.com/robcarruthers/lxi_rb/commit/27455eb78b8782cc367b94fb385720817ee11985)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(Device)** refine usage - ([d07ff0a](https://github.com/robcarruthers/lxi_rb/commit/d07ff0a30a834342cc40ed98a45a0033b87e0488)) - [@robcarruthers](https://github.com/robcarruthers)
@@ -81,3 +88,5 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 - **(ffi)** Refine code layout - ([1157a3d](https://github.com/robcarruthers/lxi_rb/commit/1157a3df2704f15f367985d1a2de602bc3f7e8d4)) - [@robcarruthers](https://github.com/robcarruthers)
 #### Tests
 - make default tests pass - ([da68bff](https://github.com/robcarruthers/lxi_rb/commit/da68bff976bea886a99a0d31c35fd17df7b780f5)) - [@robcarruthers](https://github.com/robcarruthers)
+
+
