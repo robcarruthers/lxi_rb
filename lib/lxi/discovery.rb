@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Lxi
   # Search for LXI-11 instruments on the network and return hash of instruments
   def self.discover_instruments(timeout: 1000, type: :vxi11)

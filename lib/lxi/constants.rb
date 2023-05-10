@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Lxi
   # LXI Constants
   LXI_OK = 0
