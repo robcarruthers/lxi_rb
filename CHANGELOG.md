@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 - - -
+## [v0.4.10](https://github.com/robcarruthers/lxi_rb/compare/v0.4.9..v0.4.10) - 2023-05-10
+#### Bug Fixes
+- **(ffi)** Update LXI library location search - ([e557e9a](https://github.com/robcarruthers/lxi_rb/commit/e557e9a77a81eef89260dfa14a5b3e618d6f1879)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Documentation
+- **(reademe)** Update header - ([50770ad](https://github.com/robcarruthers/lxi_rb/commit/50770ad38aaf0c7f96560a46cde0e9fa8fbaab89)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(readme)** Update - ([4fca6cb](https://github.com/robcarruthers/lxi_rb/commit/4fca6cb18e102635307d1eb670607a8be279a5f6)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Miscellaneous Chores
+- **(bundle)** Update - ([aed68fb](https://github.com/robcarruthers/lxi_rb/commit/aed68fbcc0cdb0ded4d9b634cf1c6f56438b526d)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(bundle)** Update - ([7b3f51a](https://github.com/robcarruthers/lxi_rb/commit/7b3f51a096deebc065544f4078df99bebd22c805)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(bundle)** Update - ([f4d10c1](https://github.com/robcarruthers/lxi_rb/commit/f4d10c1cb3ff920a21d2236890217bc63f1b6a18)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(bundle)** Update - ([55fcd9a](https://github.com/robcarruthers/lxi_rb/commit/55fcd9afcef33da6552e872e29fb9550ee0d3faf)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(changelog)** Updated - ([c30acfd](https://github.com/robcarruthers/lxi_rb/commit/c30acfd2ac37692f0353b45d2cf96e945e597a0b)) - [@robcarruthers](https://github.com/robcarruthers)
+- v0.4.12 - ([7f7e90e](https://github.com/robcarruthers/lxi_rb/commit/7f7e90eb2492edc5c9417e4b22db5321a64d9368)) - [@robcarruthers](https://github.com/robcarruthers)
+- v0.4.11 - ([e2c8a0f](https://github.com/robcarruthers/lxi_rb/commit/e2c8a0f1a2602e3f7cf2ddf8af8aef150e9ad217)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 
 ## Unreleased ([83cae54..895952d](https://github.com/robcarruthers/lxi_rb/compare/83cae54..895952d))
 #### Bug Fixes
