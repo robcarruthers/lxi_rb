@@ -28,7 +28,7 @@ Broadcast: 192.168.10.255, en0
 Device: 192.168.10.21, Siglent Technologies,SDS1104X-E,SDSMMGKC6R0011,8.2.6.1.37R8
 Device: 192.168.10.107, Siglent Technologies,SDM3055-SC,SDM35GBQ6R1882,1.01.01.25
 
-Lxi.discover_instruments
+Lxi.discover
 => [{:address=>"192.168.10.107", :id=>"Siglent Technologies,SDM3055-SC,SDM35GBQ6R1882,1.01.01.25"}]
 
 Lxi::Device.new('192.168.10.107', :vxi11) do |meter|

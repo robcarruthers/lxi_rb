@@ -5,8 +5,7 @@ module Lxi
   module FFIFunctions
     extend FFI::Library
 
-    ffi_lib '/opt/homebrew/lib/liblxi.dylib'
-    ffi_lib_flags :now, :global
+    ffi_lib 'liblxi'
 
     # Define liblxi structs
     class LxiInfo < FFI::Struct
