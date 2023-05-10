@@ -11,3 +11,4 @@
 /tasks/
 .streerc
 cog.toml
+Gemfile.lock
