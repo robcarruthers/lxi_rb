@@ -9,6 +9,10 @@
 - Update .gitignore - ([b70c1f0](https://github.com/robcarruthers/lxi_rb/commit/b70c1f0566db9b4043f02b4e3f79c228fd0531df)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
+## [v0.4.6](https://github.com/robcarruthers/lxi_rb/compare/v0.4.5..v0.4.6) - 2023-05-10
+
+- - -
+
 ## [v0.4.5](https://github.com/robcarruthers/lxi_rb/compare/v0.4.4..v0.4.5) - 2023-05-10
 #### Documentation
 - **(changelog)** Update - ([ac74997](https://github.com/robcarruthers/lxi_rb/commit/ac7499725d8ba920215c25196e2514bf1af58465)) - [@robcarruthers](https://github.com/robcarruthers)
