@@ -6,7 +6,9 @@
 /pkg/
 /spec/reports/
 /tmp/
-lxi_rb-*.gem
+/lxi_rb-*.gem
 /.vscode/
+/tasks/
 /.streerc
-/lib/tasks/
+/.tool-versions
+/cog.toml
