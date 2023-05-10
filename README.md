@@ -1,6 +1,6 @@
 # lxi_rb
 
-[![Gem Version](https://badge.fury.io/rb/lxi_rb.svg)](https://badge.fury.io/rb/lxi_rb) ![Ruby](https://img.shields.io/static/v1?message=Ruby&color=red&logo=Ruby&logoColor=FFFFFF&label=v3.1.2) ![Ruby](https://img.shields.io/gitlab/license/robcarruthers/rfbeam?color=orange)
+[![Gem Version](https://img.shields.io/gem/v/lxi_rb?color=green)](https://badge.fury.io/rb/lxi_rb) ![Ruby](https://img.shields.io/static/v1?message=Ruby&color=red&logo=Ruby&logoColor=FFFFFF&label=v3.1.2) ![Ruby](https://img.shields.io/gitlab/license/robcarruthers/rfbeam?color=orange)
 
 Ruby wrapper for the [liblxi](https://github.com/lxi-tools/liblxi) library.
 
@@ -8,15 +8,18 @@ Ruby wrapper for the [liblxi](https://github.com/lxi-tools/liblxi) library.
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add lxi_rb
+``` shell
+bundle add lxi_rb
+```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install lxi_rb
+``` shell
+gem install lxi_rb
+```
 
 ## Usage
 
-```ruby
+``` ruby
 Lxi.search
 Searching for LXI devices - please wait...
 
@@ -29,9 +32,12 @@ Lxi.discover_instruments
 => [{:address=>"192.168.10.107", :id=>"Siglent Technologies,SDM3055-SC,SDM35GBQ6R1882,1.01.01.25"}]
 
 Lxi::Device.new('192.168.10.107', :vxi11) do |meter|
-    puts meter.query 'MEAS:VOLT:DC?'
+    meter.send 'MEAS:VOLT:DC?'
+    sleep 0.05
+    result = meter.read 512
+    puts Float(result)
 end
-=> -4.78767775E-04
+=> -0.000478767775E-04
 ```
 
 ## Development
@@ -42,7 +48,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/lxi_rb.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/[USERNAME]/lxi_rb>.
 
 ## License
 
