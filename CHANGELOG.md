@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 - - -
+## [v0.6.0](https://github.com/robcarruthers/lxi_rb/compare/v0.5.0..v0.6.0) - 2023-05-10
+#### Miscellaneous Chores
+- **(bundle)** Update - ([df56919](https://github.com/robcarruthers/lxi_rb/commit/df5691903fa4c07fd0790920df85c45864fe754b)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## [v0.5.0](https://github.com/robcarruthers/lxi_rb/compare/v0.4.10..v0.5.0) - 2023-05-10
 #### Miscellaneous Chores
 - **(bundle)** Update - ([11f21ab](https://github.com/robcarruthers/lxi_rb/commit/11f21ab0e0c85306537510bd4ca51275756483d1)) - [@robcarruthers](https://github.com/robcarruthers)
