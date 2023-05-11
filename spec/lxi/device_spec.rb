@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../lib/lxi_rb' # Adjust relative path to the file containing the Lxi module as needed
+require_relative '../../lib/lxi_rb' # Adjust relative path to the file containing the Lxi module as needed
 
 describe Lxi::Device do
   before do

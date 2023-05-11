@@ -5,4 +5,6 @@ require 'lxi_rb'
 
 require 'minitest/autorun'
 require 'minitest/reporters'
-MiniTest::Reporters.use! [MiniTest::Reporters::DefaultReporter.new(color: true)]
+# MiniTest::Reporters.use! [MiniTest::Reporters::DefaultReporter.new(color: true)]
+Minitest::Reporters.use! [Minitest::Reporters::ProgressReporter.new]
+# Minitest::Reporters.use! [Minitest::Reporters::SpecReporter.new]

@@ -5,7 +5,7 @@ require 'rake/testtask'
 Dir.glob('tasks/*.rake').each { |r| import r }
 
 Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
+  t.libs << %w[test spec]
   t.libs << 'lib'
   t.test_files = FileList['test/**/test_*.rb', 'spec/**/*_spec.rb']
 end
