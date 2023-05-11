@@ -2,24 +2,25 @@
 
 [![Gem Version](https://img.shields.io/gem/v/lxi_rb?color=green)](https://badge.fury.io/rb/lxi_rb) ![Ruby](https://img.shields.io/static/v1?message=Ruby&color=red&logo=Ruby&logoColor=FFFFFF&label=v3.1.2) ![Ruby](https://img.shields.io/gitlab/license/robcarruthers/rfbeam?color=orange)
 
-Ruby wrapper for the [liblxi](https://github.com/lxi-tools/liblxi) library.
+Ruby wrapper for the [liblxi](https://github.com/lxi-tools/liblxi) library, which offers a simple API for communicating with LXI compatible instruments.
 
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
 
-``` shell
+```shell
 bundle add lxi_rb
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
-``` shell
+
+```shell
 gem install lxi_rb
 ```
 
 ## Usage
 
-``` ruby
+```ruby
 Lxi.search
 Searching for LXI devices - please wait...
 
@@ -48,7 +49,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at <https://github.com/[USERNAME]/lxi_rb>.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/robcarruthers/lxi_rb>.
 
 ## License
 

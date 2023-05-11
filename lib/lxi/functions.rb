@@ -5,7 +5,7 @@ module Lxi
   module FFIFunctions
     extend FFI::Library
 
-    ffi_lib 'liblxi'
+    ffi_lib %w[liblxi liblxi.so.1]
 
     # Define liblxi structs
     class LxiInfo < FFI::Struct
