@@ -33,13 +33,18 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
-  spec.add_dependency 'ffi', '~> 1.15'
+  spec.add_dependency('ffi', '~> 1.15')
 
-  spec.add_development_dependency 'bump', '~> 0.8.0'
-  spec.add_development_dependency 'rake', '~> 13.0'
-  spec.add_development_dependency 'minitest', '~> 5.14'
-  spec.add_development_dependency 'minitest-reporters', '~> 1.4'
+  spec.add_development_dependency('bump', '~> 0.8.0')
+  spec.add_development_dependency('minitest', '~> 5.14')
+  spec.add_development_dependency('minitest-reporters', '~> 1.4')
+  spec.add_development_dependency('rake', '~> 13.0')
+  spec.add_development_dependency('rubocop', '~> 1.18')
+  spec.add_development_dependency('rubocop-minitest', '~> 0.3')
+  spec.add_development_dependency('rubocop-performance', '~> 1.10')
+  spec.add_development_dependency('rubocop-rake', '~> 0.4')
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
+spec.metadata['rubygems_mfa_required'] = 'true'
 end

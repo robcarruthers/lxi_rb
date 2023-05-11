@@ -2,7 +2,7 @@
 module Lxi
   # Search for LXI-11 instruments on the network and return hash of instruments
   def self.discover(timeout: 1000, type: :vxi11)
-    raise Error, 'LXI Library Initialisation Error' unless lxi_init == LXI_OK
+    raise(Error, 'LXI Library Initialisation Error') unless lxi_init == LXI_OK
 
     devices = []
     device_callback =
@@ -14,7 +14,7 @@ module Lxi
     info[:device] = device_callback
 
     lxi_discover_internal(info, timeout, type)
-    sleep 0.1
+    sleep(0.1)
     devices
   end
 
@@ -26,10 +26,10 @@ module Lxi
     info[:broadcast] = BroadcastCallback
     info[:device] = DeviceCallback
 
-    puts "Searching for LXI devices - please wait...\n\n"
+    puts("Searching for LXI devices - please wait...\n\n")
 
     result = lxi_discover_internal(info, timeout, type)
 
-    puts "Error during discovery: #{result}" if result.negative?
+    puts("Error during discovery: #{result}") if result.negative?
   end
 end

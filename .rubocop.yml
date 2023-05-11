@@ -1,0 +1,55 @@
+# Rubocop config for lxi_rb rubygem
+AllCops:
+  TargetRubyVersion: 3.1
+  EnabledByDefault: true
+  AutoCorrect: true
+
+require:
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-minitest
+
+inherit_gem:
+  syntax_tree: config/rubocop.yml
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/BlockLength:
+  Max: 30
+
+Metrics/ClassLength:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Style/Copyright:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Lint/ConstantResolution:
+  Enabled: false
+
+Bundler/GemComment:
+  Enabled: false
+
+Style/ConstantVisibility:
+  Enabled: false
+
+Style/IpAddresses:
+  Enabled: false
+
+Style/MissingElse:
+  Enabled: false
