@@ -5,7 +5,7 @@ module Lxi
   module FFIFunctions
     extend FFI::Library
 
-    ffi_lib %w[liblxi liblxi.so.1]
+    ffi_lib %w[liblxi liblxi.so.1 /home/linuxbrew/.linuxbrew/lib/liblxi.so.1]
     ffi_lib_flags :now, :global
 
     # Define liblxi structs
