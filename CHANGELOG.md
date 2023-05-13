@@ -6,6 +6,17 @@
 - **(ffi)** Add library flags - ([6e33cb5](https://github.com/robcarruthers/lxi_rb/commit/6e33cb58d39b86ef51ff5b16d65086b0f8664aac)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
+## [v0.7.2](https://github.com/robcarruthers/lxi_rb/compare/v0.7.1..v0.7.2) - 2023-05-13
+#### Bug Fixes
+- **(linux)** Add liblxi library name - ([4192527](https://github.com/robcarruthers/lxi_rb/commit/4192527ada8d6c4b663f04e019e4d4a20a783b4a)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Documentation
+- **(readme)** Update - ([b2e1d91](https://github.com/robcarruthers/lxi_rb/commit/b2e1d91ddd88ab798d63bb94a514b8c08e6253eb)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Miscellaneous Tasks
+- **(ffi)** Add library flags - ([0c42910](https://github.com/robcarruthers/lxi_rb/commit/0c429109fa105a2c51ca2fc3677188106f5a4f43)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(ffi)** Add library flags - ([6e33cb5](https://github.com/robcarruthers/lxi_rb/commit/6e33cb58d39b86ef51ff5b16d65086b0f8664aac)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 
 ## [v0.7.1](https://github.com/robcarruthers/lxi_rb/compare/v0.7.0..v0.7.1) - 2023-05-13
 #### Miscellaneous Tasks
