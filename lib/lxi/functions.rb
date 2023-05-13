@@ -6,6 +6,7 @@ module Lxi
     extend FFI::Library
 
     ffi_lib %w[liblxi liblxi.so.1]
+    ffi_lib_flags :now, :global
 
     # Define liblxi structs
     class LxiInfo < FFI::Struct
