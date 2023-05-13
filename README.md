@@ -6,6 +6,12 @@ Ruby wrapper for the [liblxi](https://github.com/lxi-tools/liblxi) library, whic
 
 ## Installation
 
+The gem requires the liblxi library to be installed on the system. The library can be installed and macOS or Linux using [Homebrew](https://brew.sh/)
+
+```shell
+brew install liblxi
+```
+
 Install the gem and add to the application's Gemfile by executing:
 
 ```shell

@@ -1,92 +1,91 @@
-# Changelog
-
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## Unreleased ([acccfa6..0c42910](https://github.com/robcarruthers/lxi_rb/compare/acccfa6..0c42910))
+#### Bug Fixes
+- **(linux)** Add liblxi library name - ([4192527](https://github.com/robcarruthers/lxi_rb/commit/4192527ada8d6c4b663f04e019e4d4a20a783b4a)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Miscellaneous Tasks
+- **(ffi)** Add library flags - ([0c42910](https://github.com/robcarruthers/lxi_rb/commit/0c429109fa105a2c51ca2fc3677188106f5a4f43)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(ffi)** Add library flags - ([6e33cb5](https://github.com/robcarruthers/lxi_rb/commit/6e33cb58d39b86ef51ff5b16d65086b0f8664aac)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
-## [v0.7.1](https://github.com/robcarruthers/lxi_rb/compare/v0.7.0..v0.7.1) - 2023-05-11
-#### Miscellaneous Chores
+
+## [v0.7.1](https://github.com/robcarruthers/lxi_rb/compare/v0.7.0..v0.7.1) - 2023-05-13
+#### Miscellaneous Tasks
 - **(Rubocop)** Fix offences - ([ba347f4](https://github.com/robcarruthers/lxi_rb/commit/ba347f4de9bbcafb28aa86a747f88ca725e4725e)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.7.1 - ([acccfa6](https://github.com/robcarruthers/lxi_rb/commit/acccfa6006795e4ac4b95eba6f89f74c1fb564bb)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.7.0](https://github.com/robcarruthers/lxi_rb/compare/v0.6.4..v0.7.0) - 2023-05-11
+## [v0.7.0](https://github.com/robcarruthers/lxi_rb/compare/v0.6.4..v0.7.0) - 2023-05-13
+#### Miscellaneous Tasks
+- **(version)** v0.7.0 - ([f1879f2](https://github.com/robcarruthers/lxi_rb/commit/f1879f243826ac1ac58f2e06cc644b77b2e15cb0)) - [@robcarruthers](https://github.com/robcarruthers)
 #### Tests
 - **(Lxi)** Add Lxi module tests - ([627766f](https://github.com/robcarruthers/lxi_rb/commit/627766f3953486e54fc7bb67a3cb75701e1aa537)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.6.4](https://github.com/robcarruthers/lxi_rb/compare/v0.6.3..v0.6.4) - 2023-05-11
-#### Miscellaneous Chores
+## [v0.6.4](https://github.com/robcarruthers/lxi_rb/compare/v0.6.3..v0.6.4) - 2023-05-13
+#### Miscellaneous Tasks
 - **(bundle)** Update - ([dff65bb](https://github.com/robcarruthers/lxi_rb/commit/dff65bb2ba3424d55c35dbfc92b7fd7c6ff92388)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.6.4 - ([8ff7d94](https://github.com/robcarruthers/lxi_rb/commit/8ff7d94e611cb5be724d3cdc03d1dba5aafed778)) - [@robcarruthers](https://github.com/robcarruthers)
 #### Tests
 - **(device)** Add device tests - ([e8ec714](https://github.com/robcarruthers/lxi_rb/commit/e8ec714522eb034c8e130ccb8239ffc08bf63d8a)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.6.3](https://github.com/robcarruthers/lxi_rb/compare/v0.6.2..v0.6.3) - 2023-05-10
-#### Miscellaneous Chores
+## [v0.6.3](https://github.com/robcarruthers/lxi_rb/compare/v0.6.2..v0.6.3) - 2023-05-13
+#### Miscellaneous Tasks
 - **(bundle)** Update - ([9fbe7d8](https://github.com/robcarruthers/lxi_rb/commit/9fbe7d8aef4a65650d1231b8acdf8cb8392588d7)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.6.3 - ([6be7c69](https://github.com/robcarruthers/lxi_rb/commit/6be7c69445a781f4fb2a18e8a12b8252841fc807)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.6.2](https://github.com/robcarruthers/lxi_rb/compare/v0.6.1..v0.6.2) - 2023-05-10
-#### Miscellaneous Chores
+## [v0.6.2](https://github.com/robcarruthers/lxi_rb/compare/v0.6.1..v0.6.2) - 2023-05-13
+#### Miscellaneous Tasks
 - **(bundle)** Update - ([fd21961](https://github.com/robcarruthers/lxi_rb/commit/fd21961000df56b5834d414c33b8495feed37b7d)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.6.2 - ([afab06a](https://github.com/robcarruthers/lxi_rb/commit/afab06a12883de21d0628dfec4f91615c1eff4aa)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.6.1](https://github.com/robcarruthers/lxi_rb/compare/v0.6.0..v0.6.1) - 2023-05-10
-#### Miscellaneous Chores
+## [v0.6.1](https://github.com/robcarruthers/lxi_rb/compare/v0.6.0..v0.6.1) - 2023-05-13
+#### Miscellaneous Tasks
 - **(bundle)** Update - ([68d675e](https://github.com/robcarruthers/lxi_rb/commit/68d675e63747d5fa9115d62b98d0d6f99e320db0)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.6.1 - ([deb9710](https://github.com/robcarruthers/lxi_rb/commit/deb9710cf59f9b7960607e0bf6936f9ad8c2aba5)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.6.0](https://github.com/robcarruthers/lxi_rb/compare/v0.5.0..v0.6.0) - 2023-05-10
-#### Miscellaneous Chores
+## [v0.6.0](https://github.com/robcarruthers/lxi_rb/compare/v0.5.0..v0.6.0) - 2023-05-13
+#### Miscellaneous Tasks
 - **(bundle)** Update - ([df56919](https://github.com/robcarruthers/lxi_rb/commit/df5691903fa4c07fd0790920df85c45864fe754b)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.6.0 - ([2d69874](https://github.com/robcarruthers/lxi_rb/commit/2d6987451e7f713d7474f5550b9566ddc2a201d4)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.5.0](https://github.com/robcarruthers/lxi_rb/compare/v0.4.10..v0.5.0) - 2023-05-10
-#### Miscellaneous Chores
+## [v0.5.0](https://github.com/robcarruthers/lxi_rb/compare/v0.4.10..v0.5.0) - 2023-05-13
+#### Miscellaneous Tasks
 - **(bundle)** Update - ([11f21ab](https://github.com/robcarruthers/lxi_rb/commit/11f21ab0e0c85306537510bd4ca51275756483d1)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.5.0 - ([93fbb0a](https://github.com/robcarruthers/lxi_rb/commit/93fbb0a9b961a5a4fdf45d5aed3eaa6390fadb63)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.4.10](https://github.com/robcarruthers/lxi_rb/compare/v0.4.9..v0.4.10) - 2023-05-10
+## [v0.4.10](https://github.com/robcarruthers/lxi_rb/compare/v0.4.9..v0.4.10) - 2023-05-13
 #### Bug Fixes
 - **(ffi)** Update LXI library location search - ([e557e9a](https://github.com/robcarruthers/lxi_rb/commit/e557e9a77a81eef89260dfa14a5b3e618d6f1879)) - [@robcarruthers](https://github.com/robcarruthers)
 #### Documentation
 - **(reademe)** Update header - ([50770ad](https://github.com/robcarruthers/lxi_rb/commit/50770ad38aaf0c7f96560a46cde0e9fa8fbaab89)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(readme)** Update - ([4fca6cb](https://github.com/robcarruthers/lxi_rb/commit/4fca6cb18e102635307d1eb670607a8be279a5f6)) - [@robcarruthers](https://github.com/robcarruthers)
-#### Miscellaneous Chores
+#### Miscellaneous Tasks
 - **(bundle)** Update - ([aed68fb](https://github.com/robcarruthers/lxi_rb/commit/aed68fbcc0cdb0ded4d9b634cf1c6f56438b526d)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(bundle)** Update - ([7b3f51a](https://github.com/robcarruthers/lxi_rb/commit/7b3f51a096deebc065544f4078df99bebd22c805)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(bundle)** Update - ([f4d10c1](https://github.com/robcarruthers/lxi_rb/commit/f4d10c1cb3ff920a21d2236890217bc63f1b6a18)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(bundle)** Update - ([55fcd9a](https://github.com/robcarruthers/lxi_rb/commit/55fcd9afcef33da6552e872e29fb9550ee0d3faf)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(changelog)** Updated - ([c30acfd](https://github.com/robcarruthers/lxi_rb/commit/c30acfd2ac37692f0353b45d2cf96e945e597a0b)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(version)** v0.4.10 - ([578e04c](https://github.com/robcarruthers/lxi_rb/commit/578e04cdc752c818ab60fdd8bdf4e3b7cb2a6f7d)) - [@robcarruthers](https://github.com/robcarruthers)
 - v0.4.12 - ([7f7e90e](https://github.com/robcarruthers/lxi_rb/commit/7f7e90eb2492edc5c9417e4b22db5321a64d9368)) - [@robcarruthers](https://github.com/robcarruthers)
 - v0.4.11 - ([e2c8a0f](https://github.com/robcarruthers/lxi_rb/commit/e2c8a0f1a2602e3f7cf2ddf8af8aef150e9ad217)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-
-## Unreleased ([83cae54..895952d](https://github.com/robcarruthers/lxi_rb/compare/83cae54..895952d))
-#### Bug Fixes
-- **(ffi)** Update LXI library location search - ([e557e9a](https://github.com/robcarruthers/lxi_rb/commit/e557e9a77a81eef89260dfa14a5b3e618d6f1879)) - [@robcarruthers](https://github.com/robcarruthers)
-#### Documentation
-- **(reademe)** Update header - ([50770ad](https://github.com/robcarruthers/lxi_rb/commit/50770ad38aaf0c7f96560a46cde0e9fa8fbaab89)) - [@robcarruthers](https://github.com/robcarruthers)
-- **(readme)** Update - ([4fca6cb](https://github.com/robcarruthers/lxi_rb/commit/4fca6cb18e102635307d1eb670607a8be279a5f6)) - [@robcarruthers](https://github.com/robcarruthers)
-#### Miscellaneous Chores
-- **(changelog)** Updated - ([c30acfd](https://github.com/robcarruthers/lxi_rb/commit/c30acfd2ac37692f0353b45d2cf96e945e597a0b)) - [@robcarruthers](https://github.com/robcarruthers)
-
-- - -
-
-## [v0.4.9](https://github.com/robcarruthers/lxi_rb/compare/v0.4.8..v0.4.9) - 2023-05-10
-#### Miscellaneous Chores
+## [v0.4.9](https://github.com/robcarruthers/lxi_rb/compare/v0.4.8..v0.4.9) - 2023-05-13
+#### Miscellaneous Tasks
 - **(rubocop)** Fix offences - ([d7c383e](https://github.com/robcarruthers/lxi_rb/commit/d7c383ea4619064804e2e57125224fed739b0566)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(version)** v0.4.9 - ([83cae54](https://github.com/robcarruthers/lxi_rb/commit/83cae54e6c4c72afe77907a0957074c4e46ca76e)) - [@robcarruthers](https://github.com/robcarruthers)
 - Update .gitignore - ([43f4fc4](https://github.com/robcarruthers/lxi_rb/commit/43f4fc4ea9c70eeaec9d6ab4fa2c4c2eb18ab2bf)) - [@robcarruthers](https://github.com/robcarruthers)
@@ -94,35 +93,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - - -
 
-## [v0.4.8](https://github.com/robcarruthers/lxi_rb/compare/v0.4.7..v0.4.8) - 2023-05-10
-#### Miscellaneous Chores
+## [v0.4.8](https://github.com/robcarruthers/lxi_rb/compare/v0.4.7..v0.4.8) - 2023-05-13
+#### Miscellaneous Tasks
 - **(version)** v0.4.8 - ([297fe29](https://github.com/robcarruthers/lxi_rb/commit/297fe292b0f800c0a99db08308fb01af3b5ecf48)) - [@robcarruthers](https://github.com/robcarruthers)
 - Update .gitignore - ([bea47ce](https://github.com/robcarruthers/lxi_rb/commit/bea47cef4f6c236b4c16fd1465b957cee891dfb3)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.4.7](https://github.com/robcarruthers/lxi_rb/compare/v0.4.6..v0.4.7) - 2023-05-10
-#### Miscellaneous Chores
+## [v0.4.7](https://github.com/robcarruthers/lxi_rb/compare/v0.4.6..v0.4.7) - 2023-05-13
+#### Miscellaneous Tasks
 - **(bundle)** Update - ([7fa3ab3](https://github.com/robcarruthers/lxi_rb/commit/7fa3ab3f9abcac5fae1093c932d4e70cf3092920)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(version)** v0.4.7 - ([eb7a001](https://github.com/robcarruthers/lxi_rb/commit/eb7a0015e900f47272141ba49ccd996c97414b89)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.4.6](https://github.com/robcarruthers/lxi_rb/compare/v0.4.5..v0.4.6) - 2023-05-10
-#### Miscellaneous Chores
+## [v0.4.6](https://github.com/robcarruthers/lxi_rb/compare/v0.4.5..v0.4.6) - 2023-05-13
+#### Miscellaneous Tasks
 - **(version)** v0.4.6 - ([5b0289c](https://github.com/robcarruthers/lxi_rb/commit/5b0289cf33ba76ae1737593f4c85eb7c6fcf3718)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.4.5](https://github.com/robcarruthers/lxi_rb/compare/v0.4.4..v0.4.5) - 2023-05-10
+## [v0.4.5](https://github.com/robcarruthers/lxi_rb/compare/v0.4.4..v0.4.5) - 2023-05-13
 #### Documentation
 - **(changelog)** Update - ([ac74997](https://github.com/robcarruthers/lxi_rb/commit/ac7499725d8ba920215c25196e2514bf1af58465)) - [@robcarruthers](https://github.com/robcarruthers)
-#### Miscellaneous Chores
+#### Miscellaneous Tasks
 - **(version)** v0.4.5 - ([7161638](https://github.com/robcarruthers/lxi_rb/commit/7161638fd76cc37d00ca9a10f0831fa210711fbc)) - [@robcarruthers](https://github.com/robcarruthers)
 
 - - -
 
-## [v0.4.4](https://github.com/robcarruthers/lxi_rb/compare/d0d594119d79afe36f62a44688c216bbc2510f79..v0.4.4) - 2023-05-10
+## [v0.4.4](https://github.com/robcarruthers/lxi_rb/compare/d0d594119d79afe36f62a44688c216bbc2510f79..v0.4.4) - 2023-05-13
 #### Bug Fixes
 - **(Cog)** Update config - ([bc97116](https://github.com/robcarruthers/lxi_rb/commit/bc97116f3c152a37b398ded210dc9dfcb9d48238)) - [@robcarruthers](https://github.com/robcarruthers)
 #### Documentation
@@ -147,7 +146,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **(Device)** Add query - ([5fb904b](https://github.com/robcarruthers/lxi_rb/commit/5fb904b469eb92bd7df1bd18874b2743f51cae4e)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(device)** Init LXI Session - ([d326f6a](https://github.com/robcarruthers/lxi_rb/commit/d326f6a4c37f15a6b20ca3681fafa5e40588f81e)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(ffi)** Add search class method - ([2bfa417](https://github.com/robcarruthers/lxi_rb/commit/2bfa41703f810145a6d6dffb9dd18220577a43a0)) - [@robcarruthers](https://github.com/robcarruthers)
-#### Miscellaneous Chores
+#### Miscellaneous Tasks
 - **(CHANGELOG)** Update - ([003969a](https://github.com/robcarruthers/lxi_rb/commit/003969a1588609e528e5e91405a02871c7a31eaa)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(Changelog)** Update - ([9a07697](https://github.com/robcarruthers/lxi_rb/commit/9a076972668e06728171eb68b92c37cd9364e85d)) - [@robcarruthers](https://github.com/robcarruthers)
 - **(Cog)** Update config - ([46f4e5d](https://github.com/robcarruthers/lxi_rb/commit/46f4e5d0c177849b14a7068761bb5068895b5027)) - [@robcarruthers](https://github.com/robcarruthers)
