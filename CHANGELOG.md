@@ -4,6 +4,12 @@
 All notable changes to this project will be documented in this file.
 
 - - -
+## [v0.7.3](https://github.com/robcarruthers/lxi_rb/compare/v0.7.2..v0.7.3) - 2023-05-15
+#### Refactoring
+- **(gemspec)** Update Gemfile with dev group - ([b5e5cdd](https://github.com/robcarruthers/lxi_rb/commit/b5e5cdd8d7c0517e980700b43c4080ea03bf8467)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 
 ## Unreleased ([acccfa6..0c42910](https://github.com/robcarruthers/lxi_rb/compare/acccfa6..0c42910))
 #### Bug Fixes
