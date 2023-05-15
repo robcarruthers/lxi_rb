@@ -1,3 +1,10 @@
+<!-- prettier-ignore-start -->
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+- - -
+
 ## Unreleased ([acccfa6..0c42910](https://github.com/robcarruthers/lxi_rb/compare/acccfa6..0c42910))
 #### Bug Fixes
 - **(linux)** Add liblxi library name - ([4192527](https://github.com/robcarruthers/lxi_rb/commit/4192527ada8d6c4b663f04e019e4d4a20a783b4a)) - [@robcarruthers](https://github.com/robcarruthers)
@@ -210,4 +217,4 @@
 #### Tests
 - make default tests pass - ([da68bff](https://github.com/robcarruthers/lxi_rb/commit/da68bff976bea886a99a0d31c35fd17df7b780f5)) - [@robcarruthers](https://github.com/robcarruthers)
 
-
+<!-- prettier-ignore-end -->

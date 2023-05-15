@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lxi_rb (0.7.1)
+    lxi_rb (0.7.2)
       ffi (~> 1.15)
 
 GEM
@@ -10,7 +10,7 @@ GEM
     ansi (1.5.0)
     ast (2.4.2)
     builder (3.2.4)
-    bump (0.8.0)
+    bump (0.10.0)
     ffi (1.15.5)
     json (2.6.3)
     minitest (5.18.0)
@@ -52,12 +52,12 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
-  bump (~> 0.8.0)
+  bump (~> 0.10.0)
   lxi_rb!
-  minitest (~> 5.0)
+  minitest (~> 5.18)
   minitest-reporters (~> 1.4)
   rake (~> 13.0)
-  rubocop (~> 1.21)
+  rubocop (~> 1.18)
   rubocop-minitest (~> 0.3)
   rubocop-performance (~> 1.10)
   rubocop-rake (~> 0.4)
