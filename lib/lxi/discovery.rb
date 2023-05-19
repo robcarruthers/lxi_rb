@@ -16,8 +16,12 @@ module Lxi
     result = lxi_discover_internal(info, timeout, type)
     raise(Error, "Discovery error: #{result}") unless result == LXI_OK
 
-    sleep(0.1)
+    sleep(0.5)
     devices
+  end
+
+  def self.asdf
+    puts 'asdf'
   end
 
   # Discover LXI-11 devices on the LAN

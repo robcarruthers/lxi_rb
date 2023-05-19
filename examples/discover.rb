@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 require 'ffi'
-require 'lxi_rb'
+require_relative '../lib/lxi_rb'
 
 # Discovery Callbacks
 BroadcastCallback =
