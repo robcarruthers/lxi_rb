@@ -2,7 +2,7 @@
 require 'minitest/autorun'
 require_relative '../../lib/lxi_rb'
 
-describe Lxi::Device do
+class Device < Minitest::Spec
   before { Lxi.stub(:lxi_connect, 0) { @device = Lxi::Device.new('127.0.0.1', :vxi11) } }
 
   describe '#write' do

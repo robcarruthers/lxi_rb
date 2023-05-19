@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 module Lxi
-  # Search for LXI-11 instruments on the network and return hash of instruments
-  def self.discover(timeout: 1000, type: :vxi11)
+  # Search for LXI-11 instruments on the network and return array of instruments
+  def self.search(timeout: 1000, type: :vxi11)
     raise(Error, 'LXI Library Initialisation Error') unless lxi_init == LXI_OK
 
     devices = []
@@ -13,13 +13,15 @@ module Lxi
     info = FFIFunctions::LxiInfo.new
     info[:device] = device_callback
 
-    lxi_discover_internal(info, timeout, type)
+    result = lxi_discover_internal(info, timeout, type)
+    raise(Error, "Discovery error: #{result}") unless result == LXI_OK
+
     sleep(0.1)
     devices
   end
 
   # Discover LXI-11 devices on the LAN
-  def self.search(timeout: 1000, type: :vxi11)
+  def self.discover(timeout: 1000, type: :vxi11)
     Lxi.init_lxi_session
 
     info = FFIFunctions::LxiInfo.new
