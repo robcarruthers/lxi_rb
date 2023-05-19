@@ -4,6 +4,12 @@
 All notable changes to this project will be documented in this file.
 
 - - -
+## [v0.8.1](https://github.com/robcarruthers/lxi_rb/compare/v0.8.0..v0.8.1) - 2023-05-19
+#### Miscellaneous Tasks
+- **(bundle)** Update - ([eb95319](https://github.com/robcarruthers/lxi_rb/commit/eb95319bb48eb5f6c131f3e658ba1df6c3a0f4fb)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## [v0.8.0](https://github.com/robcarruthers/lxi_rb/compare/v0.7.3..v0.8.0) - 2023-05-19
 #### Features
 - **(examples)** Add scpi example - ([1d3ce45](https://github.com/robcarruthers/lxi_rb/commit/1d3ce45f199ae50fc2fded3fc2741aa132e5e4ac)) - [@robcarruthers](https://github.com/robcarruthers)
