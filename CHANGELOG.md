@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 
 - - -
+## [v0.8.0](https://github.com/robcarruthers/lxi_rb/compare/v0.7.3..v0.8.0) - 2023-05-19
+#### Features
+- **(examples)** Add scpi example - ([1d3ce45](https://github.com/robcarruthers/lxi_rb/commit/1d3ce45f199ae50fc2fded3fc2741aa132e5e4ac)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(examples)** Add discover example - ([9b51eff](https://github.com/robcarruthers/lxi_rb/commit/9b51eff22d13261525a68bd7e95064a7e7567f1b)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Refactoring
+- **(discovery)** Refine output. Fix specs. - ([4a73630](https://github.com/robcarruthers/lxi_rb/commit/4a736308a2a149ce360d351a24d58d9803ad3ad1)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## [v0.7.3](https://github.com/robcarruthers/lxi_rb/compare/v0.7.2..v0.7.3) - 2023-05-15
 #### Refactoring
 - **(gemspec)** Update Gemfile with dev group - ([b5e5cdd](https://github.com/robcarruthers/lxi_rb/commit/b5e5cdd8d7c0517e980700b43c4080ea03bf8467)) - [@robcarruthers](https://github.com/robcarruthers)
