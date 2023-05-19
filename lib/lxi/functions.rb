@@ -18,6 +18,19 @@ module Lxi
              callback(%i[pointer pointer pointer int], :void)
     end
 
+    class LxiBrowseInfo < FFI::Struct
+      layout :broadcast,
+             callback(%i[pointer pointer], :void),
+             :device,
+             callback(%i[pointer pointer], :void),
+             :service,
+             callback(%i[pointer pointer pointer int], :void),
+             :servicename,
+             :string,
+             :regtype,
+             :string
+    end
+
     # Define liblxi enums
     enum :lxi_protocol_type, %i[vxi11 raw hyslip]
     enum :lxi_discover_type, %i[vxi11 mdns]
