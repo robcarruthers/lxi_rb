@@ -23,12 +23,12 @@ module Lxi
     enum :lxi_discover_type, %i[vxi11 mdns]
 
     # Expose liblxi functions
-    attach_function :lxi_init, [], :int
-    attach_function :lxi_discover_internal, :lxi_discover, [LxiInfo.ptr, :int, :lxi_discover_type], :int
-    attach_function :lxi_discover_if, [LxiInfo.ptr, :string, :int, :lxi_discover_type], :int
-    attach_function :lxi_connect, %i[string int string int lxi_protocol_type], :int
-    attach_function :lxi_send, %i[int string int int], :int
-    attach_function :lxi_receive, %i[int pointer int int], :int
-    attach_function :lxi_disconnect, [:int], :int
+    attach_function :init, :lxi_init, [], :int
+    attach_function :discover, :lxi_discover, [LxiInfo.ptr, :int, :lxi_discover_type], :int
+    attach_function :discover_if, :lxi_discover_if, [LxiInfo.ptr, :string, :int, :lxi_discover_type], :int
+    attach_function :connect, :lxi_connect, %i[string int string int lxi_protocol_type], :int
+    attach_function :send, :lxi_send, %i[int string int int], :int
+    attach_function :recieve, :lxi_receive, %i[int pointer int int], :int
+    attach_function :disconnect, :lxi_disconnect, [:int], :int
   end
 end

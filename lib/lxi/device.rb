@@ -19,9 +19,9 @@ module Lxi
     end
 
     def connect
-      Lxi.init_lxi_session
+      Lxi.init_session
 
-      @id = Lxi.lxi_connect(@address, @port, @name, @timeout, @protocol)
+      @id = Lxi.connect(@address, @port, @name, @timeout, @protocol)
       raise(Error, 'LXI Connection Error') if @id == LXI_ERROR
 
       true
@@ -29,12 +29,12 @@ module Lxi
     alias open connect
 
     def disconnect
-      Lxi.lxi_disconnect(@id)
+      Lxi.disconnect(@id)
     end
     alias close disconnect
 
     def write(message)
-      bytes_sent = Lxi.lxi_send(@id, message, message.length, @timeout)
+      bytes_sent = Lxi.send(@id, message, message.length, @timeout)
       raise(Error, 'LXI communications error') unless bytes_sent.positive?
 
       bytes_sent
@@ -44,7 +44,7 @@ module Lxi
 
     def read(length)
       message = FFI::MemoryPointer.new(:char, length)
-      bytes_received = Lxi.lxi_receive(@id, message, length, @timeout)
+      bytes_received = Lxi.receive(@id, message, length, @timeout)
       raise(Error, 'LXI communications error') unless bytes_received.positive?
 
       message.read_string

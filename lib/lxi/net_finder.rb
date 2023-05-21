@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Lxi
   class NetFinder
     include FFI
@@ -9,14 +10,14 @@ module Lxi
 
     # Search for LXI-11 instruments on the network and return array of instruments
     def search(timeout: 1000, type: :vxi11)
-      raise(Error, 'LXI Library Initialisation Error') unless Lxi.lxi_init == LXI_OK
+      raise(Error, 'LXI Library Initialisation Error') unless Lxi.init == LXI_OK
 
       info = FFIFunctions::LxiInfo.new
       info[:broadcast] = broadcast_callback
       info[:device] = device_callback
       info[:service] = service_callback
 
-      result = Lxi.lxi_discover_internal(info, timeout, type)
+      result = Lxi.discover(info, timeout, type)
       raise(Error, "Discovery error: #{result}") unless result == LXI_OK
 
       sleep(0.5)
@@ -25,14 +26,14 @@ module Lxi
 
     def discover(timeout: 1000, type: :vxi11)
       @devices = []
-      raise(Error, 'LXI Library Initialisation Error') unless Lxi.lxi_init == LXI_OK
+      raise(Error, 'LXI Library Initialisation Error') unless Lxi.init == LXI_OK
 
       info = FFIFunctions::LxiInfo.new
       info[:service] = discover_callback
       info[:device] = device_callback
       info[:broadcast] = broadcast_callback
 
-      result = Lxi.lxi_discover_internal(info, timeout, type)
+      result = Lxi.discover(info, timeout, type)
       raise(Error, "Discovery error: #{result}") unless result == LXI_OK
 
       sleep(0.5)
@@ -55,6 +56,14 @@ module Lxi
     # end
 
     private
+
+    def check_mdns_lib?
+      Lxi::LibChecker.installed?('liblxi', %w[liblxi liblxi.so.1 /home/linuxbrew/.linuxbrew/lib/liblxi.so.1])
+    end
+
+    def check_mdns_lib?
+      Lxi::LibChecker.installed?('liblxi', %w[liblxi liblxi.so.1 /home/linuxbrew/.linuxbrew/lib/liblxi.so.1])
+    end
 
     def broadcast_callback
       FFI::Function.new(:void, %i[pointer pointer]) do |service, interface|
