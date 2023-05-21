@@ -23,20 +23,36 @@ module Lxi
       @devices
     end
 
-    # Discover LXI-11 devices on the LAN
     def discover(timeout: 1000, type: :vxi11)
-      Lxi.init_lxi_session
+      @devices = []
+      raise(Error, 'LXI Library Initialisation Error') unless Lxi.lxi_init == LXI_OK
 
       info = FFIFunctions::LxiInfo.new
-      info[:broadcast] = BroadcastCallback
-      info[:device] = DeviceCallback
+      info[:service] = discover_callback
+      info[:device] = device_callback
+      info[:broadcast] = broadcast_callback
 
-      puts("Searching for LXI devices - please wait...\n\n")
+      result = Lxi.lxi_discover_internal(info, timeout, type)
+      raise(Error, "Discovery error: #{result}") unless result == LXI_OK
 
-      result = lxi_discover_internal(info, timeout, type)
-
-      puts("Error during discovery: #{result}") if result.negative?
+      sleep(0.5)
+      @devices
     end
+
+    # # Discover LXI-11 devices on the LAN
+    # def discover(timeout: 1000, type: :vxi11)
+    #   Lxi.init_lxi_session
+
+    #   info = FFIFunctions::LxiInfo.new
+    #   info[:broadcast] = BroadcastCallback
+    #   info[:device] = DeviceCallback
+
+    #   puts("Searching for LXI devices - please wait...\n\n")
+
+    #   result = lxi_discover_internal(info, timeout, type)
+
+    #   puts("Error during discovery: #{result}") if result.negative?
+    # end
 
     private
 
@@ -60,6 +76,16 @@ module Lxi
           "    Found: #{id.read_string} at #{address.read_string}\n        #{service.read_string} service on port: #{port}"
         )
         # @devices << { address: address.read_string, id: id.read_string, service: service.read_string, port: port }
+      end
+    end
+
+    def discover_callback
+      FFI::Function.new(:void, %i[pointer pointer pointer int]) do |address, id, service, port|
+        address = address.read_string
+        id = id.read_string
+        service = service.read_string
+        port
+        @devices << { address: address, id: id, service: service, port: port }
       end
     end
   end
