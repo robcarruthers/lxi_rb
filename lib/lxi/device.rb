@@ -23,7 +23,6 @@ module Lxi
       Lxi.init_session
 
       @id = Lxi.connect(@address, @port, @name, @timeout, @protocol)
-      ap @id
       raise(Error, 'LXI Connection Error') if @id == LXI_ERROR
 
       true
@@ -36,7 +35,7 @@ module Lxi
     alias close disconnect
 
     def write(message)
-      bytes_sent = Lxi.send(@id, message, message.length, @timeout)
+      bytes_sent = Lxi.__send(@id, message, message.length, @timeout)
       raise(Error, 'LXI communications error') unless bytes_sent.positive?
 
       bytes_sent

@@ -1,6 +1,28 @@
 # frozen_string_literal: true
+
+# Example: Discover LXI devices on the LAN
+# Usage: ruby discover.rb [options]
+# Usage: ruby discover.rb --timeout_ms 1000 --search_type :vxi11
+#  -t, --timeout_ms TIMEOUT         Timeout in milliseconds
+#  -s, --search_type type           Search Type, vxi11 or mdns
+
 require 'ffi'
+require 'optparse'
 require_relative '../lib/lxi_rb'
+
+options = {}
+OptionParser
+  .new do |opts|
+    opts.banner = 'Usage: discover.rb [options]'
+
+    opts.on('-t', '--timeout_ms TIMEOUT', 'Timeout in milliseconds') do |timeout|
+      options[:timeout_ms] = Integer(timeout, 10)
+    end
+    opts.on('-s', '--search_type type', "Search Type, 'vxi11' or 'mdns'") do |param|
+      options[:search_type] = param.is_a?(Symbol) ? param : param.to_sym
+    end
+  end
+  .parse!
 
 # Discovery Callbacks
 BroadcastCallback =
@@ -10,25 +32,31 @@ BroadcastCallback =
 
 DeviceCallback =
   FFI::Function.new(:void, %i[pointer pointer]) do |address, id|
-    puts("\n    Found #{id.read_string} on address #{address.read_string}\n    lxi service on port 80")
+    puts("    Found #{id.read_string} on address #{address.read_string}")
   end
 
 ServiceCallback =
   FFI::Function.new(:void, %i[pointer pointer pointer int]) do |address, id, service, port|
-    puts("Service: #{address.read_string}, #{id.read_string}, #{service.read_string}, #{port}")
+    puts(
+      "    Found: #{id.read_string} on address #{address.read_string}, Service type: #{service.read_string}, on port: #{port}\n"
+    )
   end
 
 # Discover LXI-11 devices on the LAN
-timeout_ms = 1000
+timeout_ms = options[:timeout_ms] || 1000
 # Search types, Bonjour :mdns or VXI-11 :vxi11 (default)
-search_type = :vxi11
+search_type = options[:search_type] || :vxi11
 
-Lxi.init_lxi_session
+# Initialize LXI session
+Lxi.init_session
+
+# Setup discovery callbacks
 info = Lxi::FFIFunctions::LxiInfo.new
 info[:broadcast] = BroadcastCallback
 info[:device] = DeviceCallback
+info[:service] = ServiceCallback
 
-puts("Searching for LXI devices - please wait...\n\n")
-
-result = Lxi.lxi_discover_internal(info, timeout_ms, search_type)
+# Start discovery
+puts("\nSearching for LXI devices \n  Search type: #{search_type} - please wait...\n\n")
+result = Lxi.discover(info, timeout_ms, search_type)
 puts("Error during discovery: #{result}") if result.negative?

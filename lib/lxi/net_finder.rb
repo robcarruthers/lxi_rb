@@ -10,7 +10,7 @@ module Lxi
     end
 
     def search(timeout: 1000, type: :vxi11)
-      if type == :mDNS
+      if type == :mdns
         raise Error, 'mDNS library not found' unless check_mdns_lib?
       end
 
@@ -23,7 +23,7 @@ module Lxi
       result = Lxi.discover(info, timeout, type)
       raise(Error, "Discovery error: #{result}") unless result == LXI_OK
 
-      sleep(0.5)
+      sleep(0.25)
       @devices
     end
 
