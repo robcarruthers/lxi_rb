@@ -30,7 +30,7 @@ module Lxi
     private
 
     def check_mdns_lib?
-      Lxi::LibChecker.installed?('mdns')
+      Lxi::LibChecker.installed?(Lxi::MDNS_PATHS)
     end
 
     def broadcast_callback
