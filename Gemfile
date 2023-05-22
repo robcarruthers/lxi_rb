@@ -6,6 +6,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :development do
+  gem 'awesome_print', '~> 1.8'
   gem 'bump', '~> 0.10.0'
   gem 'minitest', '~> 5.18'
   gem 'minitest-reporters', '~> 1.4'

@@ -2,7 +2,10 @@
 
 module Lxi
   # Initialise the LXI library
-  def self.init_lxi_session
+  def self.init_session
+    unless LibChecker.installed?('liblxi', %w[liblxi liblxi.so.1 /home/linuxbrew/.linuxbrew/lib/liblxi.so.1])
+      raise Error, 'LXI Library not found'
+    end
     raise(Error, 'LXI Library Initialisation Error') unless Lxi.init == LXI_OK
   end
 

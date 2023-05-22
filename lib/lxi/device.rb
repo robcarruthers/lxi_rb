@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Lxi
   class Device
     include FFI
@@ -22,6 +23,7 @@ module Lxi
       Lxi.init_session
 
       @id = Lxi.connect(@address, @port, @name, @timeout, @protocol)
+      ap @id
       raise(Error, 'LXI Connection Error') if @id == LXI_ERROR
 
       true
