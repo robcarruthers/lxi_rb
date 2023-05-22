@@ -4,6 +4,20 @@
 All notable changes to this project will be documented in this file.
 
 - - -
+## [v0.9.0](https://github.com/robcarruthers/lxi_rb/compare/v0.8.1..v0.9.0) - 2023-05-22
+#### Features
+- **(net_finder)** Add NetFinder class - ([079cef5](https://github.com/robcarruthers/lxi_rb/commit/079cef504cb37bb238b50b8fc06edf9b441ffe95)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Miscellaneous Tasks
+- **(bundle)** Update - ([a8eeb0f](https://github.com/robcarruthers/lxi_rb/commit/a8eeb0fb80384155893159fa7e5cb13e0ec9e599)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Refactoring
+- **(examples)** Update scpi_query.rb - ([4da333f](https://github.com/robcarruthers/lxi_rb/commit/4da333fe7dcca4dc9c05c4aec52f544a9715deb4)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(examples)** Update example. Add NetFinder tests - ([0ad103e](https://github.com/robcarruthers/lxi_rb/commit/0ad103e19521bf0e2863324117f16a97f18b52ad)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(libchecker)** Add liblxi & mdns paths to LibChecker - ([c195a24](https://github.com/robcarruthers/lxi_rb/commit/c195a245aff735439fd6be65f2624fa40310ffd7)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(libchecker)** Add library check - ([5ca4924](https://github.com/robcarruthers/lxi_rb/commit/5ca4924228c8a013019e431cd9f1cae99e01893d)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(net_finder)** Refine naming. Add liblxi & mdns library checker - ([4b16bb4](https://github.com/robcarruthers/lxi_rb/commit/4b16bb4973f439a292af22e96568cdd344e3c8a6)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## [v0.8.1](https://github.com/robcarruthers/lxi_rb/compare/v0.8.0..v0.8.1) - 2023-05-19
 #### Miscellaneous Tasks
 - **(bundle)** Update - ([eb95319](https://github.com/robcarruthers/lxi_rb/commit/eb95319bb48eb5f6c131f3e658ba1df6c3a0f4fb)) - [@robcarruthers](https://github.com/robcarruthers)
