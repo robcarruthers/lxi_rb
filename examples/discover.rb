@@ -11,8 +11,8 @@ require 'optparse'
 require_relative '../lib/lxi_rb'
 
 options = {}
-OptionParser
-  .new do |opts|
+op =
+  OptionParser.new do |opts|
     opts.banner = 'Usage: discover.rb [options]'
 
     opts.on('-t', '--timeout_ms TIMEOUT', 'Timeout in milliseconds') do |timeout|
@@ -22,7 +22,7 @@ OptionParser
       options[:search_type] = param.is_a?(Symbol) ? param : param.to_sym
     end
   end
-  .parse!
+op.parse!
 
 # Discovery Callbacks
 BroadcastCallback =
@@ -37,9 +37,8 @@ DeviceCallback =
 
 ServiceCallback =
   FFI::Function.new(:void, %i[pointer pointer pointer int]) do |address, id, service, port|
-    puts(
-      "    Found: #{id.read_string} on address #{address.read_string}, Service type: #{service.read_string}, on port: #{port}\n"
-    )
+    puts("  Found: #{id.read_string} on address #{address.read_string},")
+    puts("    Service type: #{service.read_string}, on port: #{port}")
   end
 
 # Discover LXI-11 devices on the LAN
