@@ -1,11 +1,16 @@
 # frozen_string_literal: true
-require 'ffi'
+require "ffi"
 
 module Lxi
   module FFIFunctions
     extend FFI::Library
 
-    ffi_lib %w[liblxi liblxi.so.1 /home/linuxbrew/.linuxbrew/lib/liblxi.so.1]
+    ffi_lib %w[
+              liblxi
+              liblxi.so.1
+              /home/linuxbrew/.linuxbrew/lib/x86_64-linux-gnu/liblxi.so
+              /home/linuxbrew/.linuxbrew/lib/liblxi.so.1
+            ]
     ffi_lib_flags :now, :global
 
     # Define liblxi structs
@@ -24,9 +29,18 @@ module Lxi
 
     # Expose liblxi functions
     attach_function :init, :lxi_init, [], :int
-    attach_function :discover, :lxi_discover, [LxiInfo.ptr, :int, :lxi_discover_type], :int
-    attach_function :discover_if, :lxi_discover_if, [LxiInfo.ptr, :string, :int, :lxi_discover_type], :int
-    attach_function :connect, :lxi_connect, %i[string int string int lxi_protocol_type], :int
+    attach_function :discover,
+                    :lxi_discover,
+                    [LxiInfo.ptr, :int, :lxi_discover_type],
+                    :int
+    attach_function :discover_if,
+                    :lxi_discover_if,
+                    [LxiInfo.ptr, :string, :int, :lxi_discover_type],
+                    :int
+    attach_function :connect,
+                    :lxi_connect,
+                    %i[string int string int lxi_protocol_type],
+                    :int
     attach_function :__send, :lxi_send, %i[int string int int], :int
     attach_function :receive, :lxi_receive, %i[int pointer int int], :int
     attach_function :disconnect, :lxi_disconnect, [:int], :int
