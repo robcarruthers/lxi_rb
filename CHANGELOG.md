@@ -4,6 +4,13 @@
 All notable changes to this project will be documented in this file.
 
 - - -
+## [v0.10.0](https://github.com/robcarruthers/lxi_rb/compare/v0.9.0..v0.10.0) - 2023-05-24
+#### Refactoring
+- **(libchecker)** Add linux lib names and library paths - ([f19c674](https://github.com/robcarruthers/lxi_rb/commit/f19c67461fc76c8fcfd20ab95b86978af6e109ba)) - [@robcarruthers](https://github.com/robcarruthers)
+- **(netfinder)** Refine NetFinder search. Upgrade to ruby 3.2.2 +yjit - ([b26ef17](https://github.com/robcarruthers/lxi_rb/commit/b26ef179b6ba392bbfab9e1a33c239a933229cd6)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## [v0.9.0](https://github.com/robcarruthers/lxi_rb/compare/v0.8.1..v0.9.0) - 2023-05-22
 #### Features
 - **(net_finder)** Add NetFinder class - ([079cef5](https://github.com/robcarruthers/lxi_rb/commit/079cef504cb37bb238b50b8fc06edf9b441ffe95)) - [@robcarruthers](https://github.com/robcarruthers)
