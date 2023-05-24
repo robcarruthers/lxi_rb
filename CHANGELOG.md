@@ -4,6 +4,12 @@
 All notable changes to this project will be documented in this file.
 
 - - -
+## [v0.10.3](https://github.com/robcarruthers/lxi_rb/compare/v0.10.2..v0.10.3) - 2023-05-24
+#### Refactoring
+- **(device)** Refine query method. Update readme - ([e837565](https://github.com/robcarruthers/lxi_rb/commit/e837565b92b362dedda8dc3908f757dedf00c418)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## [v0.10.2](https://github.com/robcarruthers/lxi_rb/compare/v0.10.1..v0.10.2) - 2023-05-24
 #### Refactoring
 - **(readme)** Update. Add default protocol to device - ([267a522](https://github.com/robcarruthers/lxi_rb/commit/267a52250bf78214b343dc7c2384c10be8b4ff32)) - [@robcarruthers](https://github.com/robcarruthers)
