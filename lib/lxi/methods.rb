@@ -14,12 +14,10 @@ module Lxi
 
     def self.installed?(lib_paths = [])
       lib_paths.each do |path|
-        begin
-          ffi_lib path
-          return true
-        rescue LoadError
-          next
-        end
+        ffi_lib path
+        return true
+      rescue LoadError
+        next
       end
       false
     end

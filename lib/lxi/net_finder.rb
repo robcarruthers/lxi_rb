@@ -38,7 +38,7 @@ module Lxi
       info[:service] = service_callback
 
       result = Lxi.discover(info, timeout, type)
-      raise(Error, "Discovery error: #{result}") unless result == LXI_OK
+      raise Error, "Discovery error: #{result}" unless result == LXI_OK
 
       sleep(0.25)
       @devices
