@@ -9,11 +9,28 @@ module Lxi
       Lxi.init_session
     end
 
-    def search(timeout: 1000, type: :vxi11)
-      if type == :mdns
-        raise Error, 'mDNS library not found' unless check_mdns_lib?
+    def search(type = :vxi11, timeout: 1000)
+      if type == :vxi11
+        search_vxi11(timeout)
+      elsif type == :mdns
+        search_mdns(timeout)
+      else
+        raise Error, 'Invalid search type'
       end
+    end
 
+    private
+
+    def search_vxi11(timeout)
+      net_search(timeout, :vxi11)
+    end
+
+    def search_mdns(timeout)
+      raise Error, 'mDNS library not found' unless mdns_lib_found?
+      net_search(timeout, :mdns)
+    end
+
+    def net_search(timeout, type)
       @devices = []
       info = FFIFunctions::LxiInfo.new
       info[:broadcast] = broadcast_callback
@@ -27,17 +44,15 @@ module Lxi
       @devices
     end
 
-    private
-
-    def check_mdns_lib?
-      Lxi::LibChecker.installed?(Lxi::MDNS_PATHS)
+    def mdns_lib_found?
+      Lxi::LibChecker.installed?(Lxi::MDNS_LIBS)
     end
 
     def broadcast_callback
-      # FFI::Function.new(:void, %i[pointer pointer]) do |service, interface|
-      #   puts("Broadcast: #{service.read_string} on #{interface.read_string}\n\n")
-      #   @devices << { service: service.read_string, interface: interface.read_string }
-      # end
+      FFI::Function.new(:void, %i[pointer pointer]) do |service, interface|
+        # puts("Broadcast: #{service.read_string} on #{interface.read_string}\n\n")
+        # @devices << { service: service.read_string, interface: interface.read_string }
+      end
     end
 
     def device_callback
