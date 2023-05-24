@@ -4,6 +4,12 @@
 All notable changes to this project will be documented in this file.
 
 - - -
+## [v0.10.1](https://github.com/robcarruthers/lxi_rb/compare/v0.10.0..v0.10.1) - 2023-05-24
+#### Tests
+- Update tests. Fix rubocop offfences. - ([88f7284](https://github.com/robcarruthers/lxi_rb/commit/88f7284625a182b19143cc2cf159e32a3d83270d)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## [v0.10.0](https://github.com/robcarruthers/lxi_rb/compare/v0.9.0..v0.10.0) - 2023-05-24
 #### Refactoring
 - **(libchecker)** Add linux lib names and library paths - ([f19c674](https://github.com/robcarruthers/lxi_rb/commit/f19c67461fc76c8fcfd20ab95b86978af6e109ba)) - [@robcarruthers](https://github.com/robcarruthers)
