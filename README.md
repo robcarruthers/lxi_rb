@@ -1,6 +1,6 @@
 # lxi_rb
 
-[![Gem Version](https://img.shields.io/gem/v/lxi_rb?color=green)](https://badge.fury.io/rb/lxi_rb) ![Ruby](https://img.shields.io/static/v1?message=Ruby&color=red&logo=Ruby&logoColor=FFFFFF&label=v3.1.2) ![Ruby](https://img.shields.io/gitlab/license/robcarruthers/rfbeam?color=orange)
+[![Gem Version](https://img.shields.io/gem/v/lxi_rb?color=green)](https://badge.fury.io/rb/lxi_rb) ![Ruby](https://img.shields.io/static/v1?message=Ruby&color=red&logo=Ruby&logoColor=FFFFFF&label=v3.2.2+yjit) ![Ruby](https://img.shields.io/gitlab/license/robcarruthers/rfbeam?color=orange)
 
 Ruby wrapper for the [liblxi](https://github.com/lxi-tools/liblxi) library, which offers a simple API for communicating with LXI compatible instruments.
 
@@ -26,28 +26,66 @@ gem install lxi_rb
 
 ## Usage
 
-```irb
-❯ bin/console
-irb(main):001:0> net = Lxi::NetFinder.new
-=> #<Lxi::NetFinder:0x00000001047fc538>
+```ruby
+Lxi::Device.new('192.168.10.107') do |multimeter|
+    multimeter.send 'MEAS:VOLT:DC?'
+    sleep 0.05
+    result = multimeter.read 512
+    puts Float(result)
+end
+=> -0.000478767775E-04
+```
 
-irb(main):002:0> net.search
-=> [{:address=>"192.168.10.197", :id=>"RIGOL TECHNOLOGIES,M300,MM3A250200001,04.02.00.08.00"}, {:address=>"192.168.10.113", :id=>"Siglent Technologies,SDM3055-SC,SDM35GBQ6R1882,1.01.01.25"}]
+### NetFinder
+
+The Lxi module provides a NetFinder class for searching for LXI devices on the network and a Device class for communicating with LXI devices.
+
+NetFinder will broadcast a UDP packet to the network and wait for responses from LXI devices. The search method will return an array of hashes containing the IP address and identification string of each device found. By default, the search method will use the VXI-11 UDP broadcast method, but can be configured to use mDNS with the :mdns option.
+
+```ruby
+net = Lxi::NetFinder.new
+=> <Lxi::NetFinder:0x00000001047fc538>
+
+net.search
+=> [{:address=>"192.168.10.197", :id=>"RIGOL TECHNOLOGIES,M300,MM3A250200001,04.02.00.08.00"}]
 
 irb(main):003:0> net.search :mdns
-=> [{:address=>"192.168.10.109", :id=>"dummy-scope LXI", :service=>"lxi", :port=>12345},
- {:address=>"192.168.10.109", :id=>"dummy-scope VXI-11", :service=>"vxi-11", :port=>111},
- {:address=>"192.168.10.109", :id=>"dummy-scope SCPI", :service=>"scpi-raw", :port=>5025},
- {:address=>"192.168.10.109", :id=>"dummy-scope SCPI Telnet", :service=>"scpi-telnet", :port=>5026},
- {:address=>"192.168.10.109", :id=>"dummy-scope HiSLIP", :service=>"hislip", :port=>4880}]
+=> [{:address=>"192.168.10.109", :id=>"dummy-scope LXI", :service=>"lxi", :port=>12345}]
+```
 
-irb(main):004:1* Lxi::Device.new('192.168.10.107') do |meter|
-irb(main):005:1*     meter.send 'MEAS:VOLT:DC?'
-irb(main):006:1*     sleep 0.05
-irb(main):007:1*     result = meter.read 512
-irb(main):008:1*     puts Float(result)
-irb(main):009:0> end
-=> -0.000478767775E-04
+### Device API
+
+The Lxi module provides a Device class for communicating with LXI devices. The Device class can be initialized with an IP address. The Device class will attempt to connect to the device when initialized and will raise an exception if the connection fails. The Device class can also be initialized with a block, which will yield the Device object to the block and close the connection when the block exits.
+
+```ruby
+device = Lxi::Device.new('192.168.10.197')
+```
+
+#### write(message) -> int
+
+The write method will send a string to the device and return the number of bytes written.
+
+```ruby
+device.write 'MEAS:VOLT:DC?'
+=> 13
+```
+
+#### read(512) -> String
+
+The read method will read the specified number of bytes from the device and return a string.
+
+```ruby
+device.read 512
+=> "-4.90147020E-04\n"
+```
+
+#### query(message, bytes = 512, resp_delay: 0.02) -> String
+
+The query method will send a string to the device, read the optional number of bytes from the device and return a string. It also accepts an optional :resp_delay parameter, which will delay the read operation by the specified number of seconds.
+
+```ruby
+device.query 'MEAS:VOLT:DC?', 512, resp_delay: 0.05
+=> "-4.97235730E-04\n"
 ```
 
 ## Development

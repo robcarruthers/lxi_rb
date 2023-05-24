@@ -52,9 +52,10 @@ module Lxi
     end
     alias gets read
 
-    def query(message)
+    def query(message, bytes = 512, resp_delay: 0.02)
       write(message)
-      read(10_000)
+      sleep :resp_delay
+      read(bytes)
     end
   end
 end
