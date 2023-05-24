@@ -6,7 +6,7 @@ module Lxi
 
     attr_accessor :id, :address, :port, :name, :timeout, :protocol
 
-    def initialize(address, protocol)
+    def initialize(address, protocol = :vxi11)
       @address = address
       @port = 0
       @name = nil

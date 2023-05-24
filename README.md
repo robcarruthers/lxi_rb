@@ -26,24 +26,27 @@ gem install lxi_rb
 
 ## Usage
 
-```ruby
-Lxi.search
-Searching for LXI devices - please wait...
+```irb
+❯ bin/console
+irb(main):001:0> net = Lxi::NetFinder.new
+=> #<Lxi::NetFinder:0x00000001047fc538>
 
-Broadcast: 127.0.0.1, lo0
-Broadcast: 192.168.10.255, en0
-Device: 192.168.10.21, Siglent Technologies,SDS1104X-E,SDSMMGKC6R0011,8.2.6.1.37R8
-Device: 192.168.10.107, Siglent Technologies,SDM3055-SC,SDM35GBQ6R1882,1.01.01.25
+irb(main):002:0> net.search
+=> [{:address=>"192.168.10.197", :id=>"RIGOL TECHNOLOGIES,M300,MM3A250200001,04.02.00.08.00"}, {:address=>"192.168.10.113", :id=>"Siglent Technologies,SDM3055-SC,SDM35GBQ6R1882,1.01.01.25"}]
 
-Lxi.discover
-=> [{:address=>"192.168.10.107", :id=>"Siglent Technologies,SDM3055-SC,SDM35GBQ6R1882,1.01.01.25"}]
+irb(main):003:0> net.search :mdns
+=> [{:address=>"192.168.10.109", :id=>"dummy-scope LXI", :service=>"lxi", :port=>12345},
+ {:address=>"192.168.10.109", :id=>"dummy-scope VXI-11", :service=>"vxi-11", :port=>111},
+ {:address=>"192.168.10.109", :id=>"dummy-scope SCPI", :service=>"scpi-raw", :port=>5025},
+ {:address=>"192.168.10.109", :id=>"dummy-scope SCPI Telnet", :service=>"scpi-telnet", :port=>5026},
+ {:address=>"192.168.10.109", :id=>"dummy-scope HiSLIP", :service=>"hislip", :port=>4880}]
 
-Lxi::Device.new('192.168.10.107', :vxi11) do |meter|
-    meter.send 'MEAS:VOLT:DC?'
-    sleep 0.05
-    result = meter.read 512
-    puts Float(result)
-end
+irb(main):004:1* Lxi::Device.new('192.168.10.107') do |meter|
+irb(main):005:1*     meter.send 'MEAS:VOLT:DC?'
+irb(main):006:1*     sleep 0.05
+irb(main):007:1*     result = meter.read 512
+irb(main):008:1*     puts Float(result)
+irb(main):009:0> end
 => -0.000478767775E-04
 ```
 
