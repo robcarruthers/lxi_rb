@@ -4,6 +4,14 @@
 All notable changes to this project will be documented in this file.
 
 - - -
+## [v0.10.2](https://github.com/robcarruthers/lxi_rb/compare/v0.10.1..v0.10.2) - 2023-05-24
+#### Refactoring
+- **(readme)** Update. Add default protocol to device - ([267a522](https://github.com/robcarruthers/lxi_rb/commit/267a52250bf78214b343dc7c2384c10be8b4ff32)) - [@robcarruthers](https://github.com/robcarruthers)
+#### Tests
+- Add Lxi::init test - ([1ff4907](https://github.com/robcarruthers/lxi_rb/commit/1ff490711a572b02fbd25f40499dea18248de956)) - [@robcarruthers](https://github.com/robcarruthers)
+
+- - -
+
 ## [v0.10.1](https://github.com/robcarruthers/lxi_rb/compare/v0.10.0..v0.10.1) - 2023-05-24
 #### Tests
 - Update tests. Fix rubocop offfences. - ([88f7284](https://github.com/robcarruthers/lxi_rb/commit/88f7284625a182b19143cc2cf159e32a3d83270d)) - [@robcarruthers](https://github.com/robcarruthers)
