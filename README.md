@@ -57,11 +57,26 @@ irb(main):003:0> net.search :mdns
 
 The Lxi module provides a Device class for communicating with LXI devices. The Device class can be initialized with an IP address. The Device class will attempt to connect to the device when initialized and will raise an exception if the connection fails. The Device class can also be initialized with a block, which will yield the Device object to the block and close the connection when the block exits.
 
+#### `new(address, protocol = :vxi11)`
+
+You can create a new instance of the Lxi::Device class by providing a device IP address and an optional protocol (default is :vxi11). It initializes a new instance, initialises the LXI library and attempts to connect to the device.
+
 ```ruby
 device = Lxi::Device.new('192.168.10.197')
 ```
 
-#### write(message) -> int
+#### Attributes
+
+```ruby
+device.id = 0 # The device id (default is -1).
+deivice.address = '192.168.10.197' # The IP address for the device.
+deivice.port = 1234 # The port for the device (default is 0).
+device.name = 'SDM3055 Multimeter' # The name of the device (default is nil).
+device.timeout = 500 # The communication timeout in milliseconds (default is 1000).
+device.protocol = :vxi11 # The communication protocol (default is :vxi11).
+```
+
+#### `write(message)`
 
 The write method will send a string to the device and return the number of bytes written.
 
@@ -70,7 +85,7 @@ device.write 'MEAS:VOLT:DC?'
 => 13
 ```
 
-#### read(512) -> String
+#### `read(512)`
 
 The read method will read the specified number of bytes from the device and return a string.
 
@@ -79,13 +94,21 @@ device.read 512
 => "-4.90147020E-04\n"
 ```
 
-#### query(message, bytes = 512, resp_delay: 0.02) -> String
+#### `query(message, bytes = 512, resp_delay: 0.02)`
 
 The query method will send a string to the device, read the optional number of bytes from the device and return a string. It also accepts an optional :resp_delay parameter, which will delay the read operation by the specified number of seconds.
 
 ```ruby
 device.query 'MEAS:VOLT:DC?', 512, resp_delay: 0.05
 => "-4.97235730E-04\n"
+```
+
+#### `disconnect`
+
+The disconnect method will close the connection to the device.
+
+```ruby
+device.disconnect
 ```
 
 ## Development
